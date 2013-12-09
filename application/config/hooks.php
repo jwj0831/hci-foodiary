@@ -12,7 +12,7 @@
 
 $hook['post_controller_constructor'][] = array(
 	'function' => 'b_check',
-	'file_name' => 'brower_check.php',
+	'file_name' => 'browser_check.php',
 	'filepath' => 'hooks'
 );
 
