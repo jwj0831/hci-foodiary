@@ -1,8 +1,9 @@
 body {
 	background-image: url('../images/bg_repeat.png');
+	font-family: 'Roboto', sans-serif;
 }
 
 #wrapper .container-top {
-	width: 960px;
+	width: 1160px;
 	margin: auto;
 }

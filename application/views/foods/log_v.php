@@ -1,6 +1,9 @@
 <div id="mainWrapper">
 	<div id="container">
-		<div>
+		<div class="page_title">
+			<div>Upload Your New Food Records</div>
+		</div>
+		<div class="upload_area">
 			<div class="input-group">
 				<span class="input-group-addon">Menu</span>
 				<input type="text" class="form-control" placeholder="Menu...">

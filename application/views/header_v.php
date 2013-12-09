@@ -9,14 +9,17 @@
 		<link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
 		<title>Starter Template for Bootstrap</title>
-
+	
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
-
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
-
+		<!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">-->
+		
+		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+		
+		<!-- Font Awesome's CDN -->
+		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+		
 		<!-- Custom styles for this template -->
+		<link rel="stylesheet" type="text/css" href="/hci-foodiary/static/css/bootstrap.min.css" >
 		<link rel="stylesheet" type="text/css" href="/hci-foodiary/static/css/global.css" >
 		<link rel="stylesheet" type="text/css" href="/hci-foodiary/static/css/foodiary_w.css" >
 		<!--
@@ -50,12 +53,12 @@
 						<a class="navbar-brand" href="/hci-foodiary">Foodiary</a>
 					</div>
 					<div class="collapse navbar-collapse">
-						<ul class="nav navbar-nav">
+						<ul class="nav navbar-nav pull">
 							<li>
-								<a href="/hci-foodiary/foods/log"<span class="glyphicon glyphicon-plus"> Log</span></a>
+								<a href="/hci-foodiary/foods/log"><i class="fa fa-plus"></i> New</a>
 							</li>
 							<li>
-								<a href="/hci-foodiary/foods/me"<span class="glyphicon glyphicon-user"> Me</span></a>
+								<a href="/hci-foodiary/foods/me"><i class="fa fa-user"></i> Me</a>
 							</li>
 							
 						</ul>
