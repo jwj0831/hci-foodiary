@@ -2,6 +2,15 @@ body {
   padding-top: 50px;
 }
 
+/*
+ * Navigation Bar Part
+ */
+.container-top {
+	width: 960px;
+	margin: auto;
+}
+
+
 .foodiary-template {
   padding: 40px 15px;
   text-align: center;

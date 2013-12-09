@@ -17,7 +17,8 @@
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap-theme.min.css">
 
 		<!-- Custom styles for this template -->
-		<link rel="stylesheet" href="/hci-foodiary/static/css/foodiary.css" >
+		<link rel="stylesheet" type="text/css" href="/hci-foodiary/static/css/global.css" >
+		<link rel="stylesheet" type="text/css" href="/hci-foodiary/static/css/foodiary_w.css" >
 		<!--
 		<script>
 			$(document).ready(function(){
