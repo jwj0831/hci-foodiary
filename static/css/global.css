@@ -1,4 +1,8 @@
 body {
-	background-image: url('../images/bg_hoffman.png');
+	background-image: url('../images/bg_repeat.png');
 }
 
+#wrapper .container-top {
+	width: 960px;
+	margin: auto;
+}

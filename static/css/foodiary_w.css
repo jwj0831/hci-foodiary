@@ -1,24 +1,28 @@
-body {
-  padding-top: 50px;
-}
-
 /*
- * Navigation Bar Part
+ * Foodiary
+ * Web page CSS 
  */
-.container-top {
+
+#mainWrapper {
 	width: 960px;
 	margin: auto;
+	height: 100%;
 }
 
-
-.foodiary-template {
-  padding: 40px 15px;
-  text-align: center;
+#container {
+	padding-top: 20px;
+	min-height: 600px;
+	background-color: #fff;
+	margin: 80px 0px 0px 0px;
+	-webkit-box-shadow: 0px 0px 20px 1px #ccc;
+	-moz-box-shadow: 0px 0px 20px 1px #ccc;
+	box-shadow: 0px 0px 20px 1px #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	z-index: 1;
 }
 
-footer p {
-	text-align: center;
-}
 .js-masonry{
 	margin: 0 auto;
 }
@@ -30,4 +34,9 @@ footer p {
   border: 2px solid #3533;
   border-radius: 5px;
   margin-bottom: 10px;
+}
+
+
+footer p {
+	text-align: center;
 }
