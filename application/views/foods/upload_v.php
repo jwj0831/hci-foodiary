@@ -10,7 +10,7 @@
 ?>
 			<div class="thumbnail" id="food_img_thumb">
                 <img class="img-rounded" id="img-thumb-area" src="http://placehold.it/400x250/000/fff" alt="food_pic" />
-                <input id="food_img" name="food_img" type="file" accept="image/*;capture=camera" value="<?php set_value('food_img')?>" onchange="PreviewImage();"/>
+                <input id="food_img" name="food_img" type="file" accept="image/*;capture=camera" value="<?php echo set_value('food_img'); ?>" onchange="PreviewImage();"/>
                 <script type="text/javascript">
 				    function PreviewImage() {
 				        var imageReader = new FileReader();
@@ -26,7 +26,7 @@
 				</script>
 			</div>
 			<div class="form-group" id="food_name_input">
-				<input type="text" class="form-control" id="food_name" name="food_name" value="<?php echo set_value('food_name');?>" placeholder="Enter Food's name">
+				<input type="text" class="form-control" id="food_name" name="food_name" value="<?php echo set_value('food_name'); ?>" placeholder="Enter Food's name">
 			</div>
 			<div id="geoLoc-area">
 				<input type="hidden" class="geo-location" id="geo-result" name="geo-result" value="GEO_OK">
@@ -40,7 +40,16 @@
 			<div id="btn-area">
 				<button type="button" class="btn btn-primary" id="upload-btn">Send</button>
 			</div>
-			
+			<div class="error">
+				<p class="help-block">
+<?php
+if(@$error) {
+	echo $error."<BR>";
+}
+?>
+				<?php echo validation_errors(); ?>
+				</p>
+			</div>
 			<script>
 				if ( typeof navigator.geolocation == 'undefined') {
 					alert("Sorry, your browser doesn't support Geolocation.")
