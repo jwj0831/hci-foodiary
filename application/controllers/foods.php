@@ -100,6 +100,7 @@ class Foods extends CI_Controller {
 				$upload_data['ratings'] = $this->input->post('ratings', true);
 				$upload_data['geo_lat'] = $this->input->post('geo_lat', true);
 				$upload_data['geo_long'] = $this->input->post('geo_long', true);
+				$upload_data['comments'] = "Test Comments";
 				//$upload_data['comments'] = $this->input->post('comments', true);
 				
 				$result = $this->foodiary_m->insert_new_food_records($upload_data);
