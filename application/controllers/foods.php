@@ -105,7 +105,7 @@ class Foods extends CI_Controller {
 				
 				$result = $this->foodiary_m->insert_new_food_records($upload_data);
 				
-				redirect('/hci-foodiary'); exit;
+				redirect('/'); exit;
 			}
 		}
 	}
