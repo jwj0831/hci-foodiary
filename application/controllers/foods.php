@@ -89,7 +89,7 @@ class Foods extends CI_Controller {
 			$this->load->library('upload', $config);
 			if ( !$this->upload->do_upload() )
 			{
-				$data['errors'] = $this->upload->display_errors();
+				$data['error'] = $this->upload->display_errors();
 				$this->load->view('foods/upload_v', $data);
 			}
 			else 
