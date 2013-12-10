@@ -18,7 +18,18 @@
 				  //alert('new rating is ' + value);
 				  $('#rating-val').val( value );
 				});
+				
+				$("#upload-btn").click(function(){
+					if($("food_name").val() == ""){
+						alert('Please Input Food name');
+						return false;
+					}
+					else{
+						$("#upload_action").submit();
+					}
+				});
 			});
+			
  	  	</script>
 	</body>
 </html>

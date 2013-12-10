@@ -5,7 +5,7 @@
 		</div>
 		<div class="upload_area">
 <?php
-	$attr = array( 'role' => 'form', 'id' => 'upload_action', 'action' => '', 'method' => 'post' );
+	$attr = array( 'role' => 'form', 'id' => 'upload_action','method' => 'post' );
 	echo form_open_multipart('/hci-foodiary/foods/new_food', $attr);
 ?>
 			<div class="thumbnail" id="food_img_thumb">
