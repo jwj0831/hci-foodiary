@@ -9,12 +9,12 @@
 	echo form_open_multipart('/foods/new_food', $attr);
 ?>
 			<div class="thumbnail" id="food_img_thumb">
-                <img class="img-rounded" id="img-thumb-area" src="http://placehold.it/400x250/000/fff" alt="food_pic" />
-                <input id="food_img" name="food_img" type="file" accept="image/*;capture=camera" value="<?php echo set_value('food_img'); ?>" onchange="PreviewImage();"/>
+                <img class="img-rounded" id="img-thumb-area" src="" alt="food_pic" />
+                <input id="input_img" name="food_img" type="file" accept="image/*;capture=camera" value="<?php echo set_value('food_img'); ?>" onchange="PreviewImage();"/>
                 <script type="text/javascript">
 				    function PreviewImage() {
 				        var imageReader = new FileReader();
-				        imageReader.readAsDataURL(document.getElementById("food_img").files[0]);
+				        imageReader.readAsDataURL(document.getElementById("input_img").files[0]);
 				        imageReader.onload = function (oFREvent) {
 				            document.getElementById("img-thumb-area").src = oFREvent.target.result;
 				            document.getElementById("img-thumb-area").style.width = "400px";
@@ -26,12 +26,12 @@
 				</script>
 			</div>
 			<div class="form-group" id="food_name_input">
-				<input type="text" class="form-control" id="food_name" name="food_name" value="<?php echo set_value('food_name'); ?>" placeholder="Enter Food's name">
+				<input type="text" class="form-control" id="input_name" name="food_name" value="<?php echo set_value('food_name'); ?>" placeholder="Enter Food's name">
 			</div>
 			<div id="geoLoc-area">
-				<input type="hidden" class="geo-location" id="geo-result" name="geo-result" value="GEO_OK">
-				<input type="hidden" class="geo-location" id="geo-lat" name="geo-lat" value="0.0">
-				<input type="hidden" class="geo-location" id="geo-long" name="geo-long" value="0.0">
+				<input type="hidden" class="geo-location" id="geo-result-input" name="geo-result" value="GEO_OK">
+				<input type="hidden" class="geo-location" id="geo-lat-input" name="geo-lat" value="0.0">
+				<input type="hidden" class="geo-location" id="geo-long-input" name="geo-long" value="0.0">
 			</div>
 			<div id="rating-area">
 				<div class="starrr"></div>
@@ -57,8 +57,8 @@ if(@$error) {
 					navigator.geolocation.getCurrentPosition(granted, denied)
 	
 					function granted(position) {
-						document.getElementById('geo-lat').value = position.coords.latitude;
-						document.getElementById('geo-long').value = position.coords.longitude;
+						document.getElementById('geo-lat-input').value = position.coords.latitude;
+						document.getElementById('geo-long-input').value = position.coords.longitude;
 					}
 	
 					function denied(error) {
