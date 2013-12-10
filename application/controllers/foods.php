@@ -75,7 +75,7 @@ class Foods extends CI_Controller {
 		
 		if( $this->form_validation->run() == FALSE )
 		{
-			$this->load->view('foods/upload_v');
+			$this->load->view('foods/');
 		}
 		else
 		{
@@ -100,7 +100,7 @@ class Foods extends CI_Controller {
 				$upload_data['ratings'] = $this->input->post('ratings', true);
 				$upload_data['geo_lat'] = $this->input->post('geo_lat', true);
 				$upload_data['geo_long'] = $this->input->post('geo_long', true);
-				$upload_data['comments'] = $this->input->post('comments', true);
+				//$upload_data['comments'] = $this->input->post('comments', true);
 				
 				$result = $this->foodiary_m->insert_new_food_records($upload_data);
 				
