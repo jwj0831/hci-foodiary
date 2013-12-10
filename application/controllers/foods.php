@@ -22,6 +22,7 @@ class Foods extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->database();
+		$this->load->model('foodiary_m');
 		$this->load->helper('form');
 	}
 	
@@ -67,7 +68,45 @@ class Foods extends CI_Controller {
 	
 	public function new_food()
 	{
-		$this->load->view('foods/upload_v');
+		$this->load->library('form_validation');
+		
+		$this->form_validation->set_rules('food_name', 'Food Name', 'required');
+		$this->form_validation->set_rules('food_img', 'Food Image', 'required');
+		
+		if( $this->form_validation->run() == FALSE )
+		{
+			$this->load->view('foods/upload_v');
+		}
+		else
+		{
+			$config = array(
+				'upload_path' => 'uploads/',
+				'allowed_types' => 'gif|jpg|png',
+				'encrypt_name' => TRUE,
+				'max_size' => '5000'
+			);
+			
+			$this->load->library('upload', $config);
+			if ( !$this->upload->do_upload() )
+			{
+				$data['errors'] = $this->upload->display_errors();
+				$this->load->view('foods/upload_v', $data);
+			}
+			else 
+			{
+				$upload_data = $this->upload->data();
+				$upload_data['user_id'] = "NFM";	// Temp
+				$upload_data['food_name'] = $this->input->post('food_name', true);
+				$upload_data['ratings'] = $this->input->post('ratings', true);
+				$upload_data['geo_lat'] = $this->input->post('geo_lat', true);
+				$upload_data['geo_long'] = $this->input->post('geo_long', true);
+				$upload_data['comments'] = $this->input->post('comments', true);
+				
+				$result = $this->foodiary_m->insert_new_food_records($upload_data);
+				
+				redirect('/hci-foodiary'); exit;
+			}
+		}
 	}
 	
 	public function me()

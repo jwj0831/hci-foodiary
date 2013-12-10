@@ -10,7 +10,7 @@
 ?>
 			<div class="thumbnail" id="food_img_thumb">
                 <img class="img-rounded" id="img-thumb-area" src="http://placehold.it/400x250/000/fff" alt="food_pic" />
-                <input id="pic_submit" type="file" accept="image/*;capture=camera" value="<?php set_value('food_img')?>" onchange="PreviewImage();"/>
+                <input id="food_img" type="file" accept="image/*;capture=camera" value="<?php set_value('food_img')?>" onchange="PreviewImage();"/>
                 <script type="text/javascript">
 				    function PreviewImage() {
 				        var imageReader = new FileReader();
