@@ -70,8 +70,8 @@ class Foods extends CI_Controller {
 	{
 		$this->load->library('form_validation');
 		
-		//$this->form_validation->set_rules('food_name', 'Food Name', 'required');
-		//$this->form_validation->set_rules('food_img', 'Food Image', 'required');
+		$this->form_validation->set_rules('food_name', 'Food Name', 'required');
+		$this->form_validation->set_rules('food_img', 'Food Image', 'required');
 		
 		if( $this->form_validation->run() == FALSE )
 		{
