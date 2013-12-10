@@ -10,7 +10,7 @@
 ?>
 			<div class="thumbnail" id="food_img_thumb">
                 <img class="img-rounded" id="img-thumb-area" src="" alt="food_pic" />
-                <input id="input_img" name="food_img" type="file" accept="image/*;capture=camera" value="<?php echo set_value('food_img'); ?>" onchange="PreviewImage();"/>
+                <input id="input_img" name="userfile" type="file" accept="image/*;capture=camera" value="<?php echo set_value('userfile'); ?>" onchange="PreviewImage();"/>
                 <script type="text/javascript">
 				    function PreviewImage() {
 				        var imageReader = new FileReader();
@@ -26,7 +26,7 @@
 				</script>
 			</div>
 			<div class="form-group" id="food_name_input">
-				<input type="text" class="form-control" id="input_name" name="userfile" value="<?php echo set_value('userfile'); ?>" placeholder="Enter Food's name">
+				<input type="text" class="form-control" id="input_name" name="food_name" value="<?php echo set_value('food_name'); ?>" placeholder="Enter Food's name">
 			</div>
 			<div id="geoLoc-area">
 				<input type="hidden" class="geo-location" id="geo-result-input" name="geo-result" value="GEO_OK">
