@@ -75,7 +75,7 @@ class Foods extends CI_Controller {
 		
 		if( $this->form_validation->run() == FALSE )
 		{
-			$this->load->view('foods');
+			$this->load->view('foods/upload_v');
 		}
 		else
 		{
