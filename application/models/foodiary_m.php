@@ -33,7 +33,7 @@ class Foodiary_m extends CI_Model
 			'reg_date' => date("Y-m-d H:i:s")
 		);
 		
-		$this->db->insert('food_records', $insert_arrays);
+		$this->db->insert('food_records', $insert_array);
 		//$result = $this->db->insert_id();
 	}
 }
