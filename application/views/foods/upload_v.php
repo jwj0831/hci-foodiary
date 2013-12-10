@@ -26,7 +26,7 @@
 				</script>
 			</div>
 			<div class="form-group" id="food_name_input">
-				<input type="text" class="form-control" id="food_name" name="food_name" placeholder="Enter Food's name">
+				<input type="text" class="form-control" id="food_name" name="food_name" value="<?php echo set_value('food_name');?>" placeholder="Enter Food's name">
 			</div>
 			<div id="geoLoc-area">
 				<input type="hidden" class="geo-location" id="geo-result" name="geo-result" value="GEO_OK">
