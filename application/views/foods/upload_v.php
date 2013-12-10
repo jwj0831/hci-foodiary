@@ -14,7 +14,7 @@
                 <script type="text/javascript">
 				    function PreviewImage() {
 				        var imageReader = new FileReader();
-				        imageReader.readAsDataURL(document.getElementById("pic_submit").files[0]);
+				        imageReader.readAsDataURL(document.getElementById("food_img").files[0]);
 				        imageReader.onload = function (oFREvent) {
 				            document.getElementById("img-thumb-area").src = oFREvent.target.result;
 				            document.getElementById("img-thumb-area").style.width = "400px";
