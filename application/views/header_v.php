@@ -11,33 +11,24 @@
 		<title>Starter Template for Bootstrap</title>
 	
 		<!-- Latest compiled and minified CSS -->
-		<!--<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">-->
-		
-		<link href='http://fonts.googleapis.com/css?family=Roboto:400,300' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
 		
 		<!-- Font Awesome's CDN -->
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		
 		<!-- Custom styles for this template -->
-		<link rel="stylesheet" type="text/css" href="/hci-foodiary/static/css/bootstrap.min.css" >
 		<link rel="stylesheet" type="text/css" href="/hci-foodiary/static/css/global.css" >
 		<link rel="stylesheet" type="text/css" href="/hci-foodiary/static/css/foodiary_w.css" >
-		<!--
-		<script>
-			$(document).ready(function(){
-				$('ahref="' + this.location.pathname + '"]'.parent().addClass('active');
-			})
-			
-		</script>
-		-->
-		<!-- Just for debugging purposes. Don't actually copy this line! -->
-		<!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+		
+
 
 		<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
 		<!--[if lt IE 9]>
 		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 		<script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
 		<![endif]-->
+		
+		<!-- Front Page -->
 	</head>
 
 	<body>
@@ -55,7 +46,7 @@
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav pull">
 							<li>
-								<a href="/hci-foodiary/foods/log"><i class="fa fa-plus"></i> New</a>
+								<a href="/hci-foodiary/foods/new_food"><i class="fa fa-plus"></i> New</a>
 							</li>
 							<li>
 								<a href="/hci-foodiary/foods/me"><i class="fa fa-user"></i> Me</a>

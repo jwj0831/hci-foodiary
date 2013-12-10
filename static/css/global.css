@@ -1,8 +1,8 @@
 body {
 	background-image: url('../images/bg_repeat.png');
-	font-family: 'Roboto', sans-serif;
 }
 
+/* Nav Bar Width*/
 #wrapper .container-top {
 	width: 1160px;
 	margin: auto;

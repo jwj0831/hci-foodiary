@@ -1,4 +1,4 @@
-<div id="mainWrapper">
+<div id="foods_page" class="mainWrapper">
 	<div id="container" class="container">
     <div class="well well-sm">
         <strong>Category Title</strong>

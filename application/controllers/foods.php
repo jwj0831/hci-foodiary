@@ -21,7 +21,8 @@ class Foods extends CI_Controller {
 	function __construct()
 	{
 		parent::__construct();
-			$this->load->database();
+		$this->load->database();
+		$this->load->helper('form');
 	}
 	
 	public function index()
@@ -64,9 +65,9 @@ class Foods extends CI_Controller {
 		$this->load->view('foods/main_grid_v');	
 	}
 	
-	public function log()
+	public function new_food()
 	{
-		$this->load->view('foods/log_v');
+		$this->load->view('foods/upload_v');
 	}
 	
 	public function me()

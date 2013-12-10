@@ -4,7 +4,7 @@
  * Web page CSS 
  */
 
-#mainWrapper {
+.mainWrapper {
 	width: 1160px;
 	margin: auto;
 	height: 100%;
@@ -23,6 +23,7 @@
 	z-index: 1;
 }
 
+/*
 .page_title {
 	font-size: 32px;
 	text-align: center;
@@ -30,6 +31,7 @@
 	padding-top: 20px;
 	border-bottom: 1px solid #ccc;
 }
+*/
 
 footer div {
 	text-align: center;
@@ -38,11 +40,14 @@ footer div {
 /*
  * main grid page part
  */
+
+
 #main_grid {
 	margin-top: 10px;
 }
 
 .glyphicon { margin-right:5px; }
+
 .thumbnail
 {
     margin-bottom: 20px;
@@ -107,3 +112,42 @@ footer div {
 .upload_area {
 
 }
+
+#upload_page {
+	width: 460px;
+	margin: auto;
+	height: 100%;
+}
+
+#upload_title {
+	font-size: 20px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#food_img_thumb {
+	border: 0px;
+}
+
+#img-thumb-area {
+	display: none;
+}
+
+#food_name_input {
+	margin: 10px 30px;
+}
+
+#btn-area {
+	text-align: center;
+}
+#upload-btn {
+	width: 120px;
+}
+
+
+.starrr{
+	text-align: center;
+	font-size: 40px;
+}
+
