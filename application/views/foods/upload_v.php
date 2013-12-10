@@ -6,7 +6,7 @@
 		<div class="upload_area">
 <?php
 	$attr = array( 'role' => 'form', 'id' => 'upload_action','method' => 'post' );
-	echo form_open_multipart('/hci-foodiary/foods/new_food', $attr);
+	echo form_open_multipart('/foods/new_food', $attr);
 ?>
 			<div class="thumbnail" id="food_img_thumb">
                 <img class="img-rounded" id="img-thumb-area" src="http://placehold.it/400x250/000/fff" alt="food_pic" />
