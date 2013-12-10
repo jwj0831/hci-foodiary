@@ -20,7 +20,7 @@
 				});
 				
 				$("#upload-btn").click(function(){
-					if($("food_name").val() == ""){
+					if($("#food_name").val() == ""){
 						alert('Please Input Food name');
 						return false;
 					}
