@@ -94,11 +94,14 @@ footer div {
     content: " ";
 }
 
+.thumbnail #food_img{
+	width: 400px;
+	height: 250px;
+}
+
 .item.list-group-item img
 {
     float: left;
-    width: 400px;
-	height: 250px;
 }
 .item.list-group-item:after
 {

@@ -58,5 +58,3 @@ class Foodiary_m extends CI_Model
 	
 }
 
-?>
-
