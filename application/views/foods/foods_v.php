@@ -1,6 +1,6 @@
 <div id="foods_page" class="mainWrapper">
-	<div id="container" class="container">
-		<div id="products" class="row list-group">
+	<div id="food_container">
+		<div id="foods" class="row list-group">
 <?php
 $i=1;
 foreach ($list as $lt)
@@ -20,10 +20,22 @@ foreach ($list as $lt)
 	                <img id="food_img" class="group list-group-image" src="<?php echo $thumb_img; ?>" alt="" />
 	                <div class="caption">
 	                    <div class="row">
-	                        <div class="col-xs-12 col-md-6">
-	                            <p class="food_names"><?php echo $lt->food_name; ?></p>
+	                        <div class="col-md-7">
+	                        	<?php 
+	                        	if (mb_strlen($lt->food_name, "utf-8") > 14 )
+	                        	{
+	                        		$food_name = mb_substr($lt->food_name, 0, 14, "utf-8");
+									$food_name = $food_name."...";
+	                        	}
+								else 
+								{
+									$food_name = $lt->food_name;
+								}
+	                        	?>
+	                            <p class="food_names"><?php echo $food_name; ?></p>
 	                        </div>
-	                        <div class="col-xs-12 col-md-6 pull-right">
+	                        <div class="=col-md-5">
+	                        	<div id="rating bar" class="pull-right">
 <?php
 $i=0;
 for($i=0; $i <$lt->ratings; $i++)
@@ -35,6 +47,7 @@ for(; $i < 5; $i++)
 	echo '<span class="glyphicon glyphicon-star-empty"></span>';
 }
 ?>
+								</div>
 	                        </div>
 	                    </div>
 	                </div>

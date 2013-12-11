@@ -45,9 +45,8 @@ class Foodiary_m extends CI_Model
 		return $result;
 	}
 	
-	function get_food_records($table, $num_of_records)
+	function get_food_records($table, $offset, $num_of_records)
 	{
-		$offset = 0;
 		$limit_query = ' LIMIT '.$offset.', '.$num_of_records;
 		
 		$sql = "SELECT id, file_name, food_name, ratings FROM ".$table." ORDER BY id DESC".$limit_query;

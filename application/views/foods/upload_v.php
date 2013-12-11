@@ -1,13 +1,16 @@
 <div id="upload_page" class="mainWrapper">
-	<div id="container">
+	<div id="upload_container">
 		<div id="upload_title">
 			<div>Upload New Food Records</div>
 		</div>
 		<div class="upload_area">
+
 <?php
-	$attr = array( 'role' => 'form', 'id' => 'upload_action','method' => 'post' );
-	echo form_open_multipart('/foods/new_food', $attr);
+//	$attr = array( 'role' => 'form', 'id' => 'upload_action','method' => 'post' );
+//	echo form_open_multipart('/foods/new_food', $attr);
 ?>
+		<form action="/hci-foodiary/foods/new_food" accept-charset="utf-8" role="form" id="upload_action" method="post" enctype="multipart/form-data">
+
 			<div class="thumbnail" id="food_img_thumb">
                 <img class="img-rounded" id="img-thumb-area" src="" alt="food_pic" />
                 <input id="input_img" name="userfile" type="file" accept="image/*;capture=camera" value="<?php echo set_value('userfile'); ?>" onchange="PreviewImage();"/>

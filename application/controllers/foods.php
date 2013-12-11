@@ -29,15 +29,16 @@ class Foods extends CI_Controller {
 	public function index()
 	{
 		if (BROWSER_TYPE == 'W'){
-
+			$offset = 0;
 			$num_of_records = 9;
-			$data['list'] = $this->foodiary_m->get_food_records('food_records', $num_of_records);
+			$data['list'] = $this->foodiary_m->get_food_records('food_records', $offset, $num_of_records);
 			$this->load->view('foods/foods_v', $data);
 		}
 		else if (BROWSER_TYPE == 'M'){
 			$this->load->view('mobile/foods/m_foods_v');
 		}	
 	}
+	
 	
 	public function _remap($method)
 	{
