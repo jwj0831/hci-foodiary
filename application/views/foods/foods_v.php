@@ -17,7 +17,7 @@ foreach ($list as $lt)
 ?>
 	        <div class="item  col-xs-4 col-lg-4">
 	            <div class="thumbnail">
-	                <img class="group list-group-image" src="<?php echo $thumb_img; ?>" alt="" />
+	                <img id="food_img" class="group list-group-image" src="<?php echo $thumb_img; ?>" alt="" />
 	                <div class="caption">
 	                    <div class="row">
 	                        <div class="col-xs-12 col-md-6">
