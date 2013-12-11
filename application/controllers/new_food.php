@@ -62,7 +62,7 @@ class New_food extends CI_Controller {
 		
 	}
 	
-	public function new_food()
+	public function upload()
 	{
 		$this->load->library('form_validation');
 		

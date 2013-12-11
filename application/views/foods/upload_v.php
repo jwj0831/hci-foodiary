@@ -4,13 +4,10 @@
 			<div>Upload New Food Records</div>
 		</div>
 		<div class="upload_area">
-
 <?php
 	$attr = array( 'role' => 'form', 'id' => 'upload_action','method' => 'post' );
- 	echo form_open_multipart('', $attr);
+ 	echo form_open_multipart('/new_food/upload', $attr);
 ?>
-
-
 			<div class="thumbnail" id="food_img_thumb">
                 <img class="img-rounded" id="img-thumb-area" src="" alt="food_pic" />
                 <input id="input_img" name="userfile" type="file" accept="image/*;capture=camera" value="<?php echo set_value('userfile'); ?>" onchange="PreviewImage();"/>
