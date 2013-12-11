@@ -23,7 +23,6 @@ class AjaxFood extends CI_Controller {
 		parent::__construct();
 		$this->load->database();
 		$this->load->model('foodiary_m');
-		$this->load->helper(array('form', 'url'));
 	}
 
 	function index()
@@ -32,14 +31,14 @@ class AjaxFood extends CI_Controller {
 		$data = json_decode($data);
 		$offset = $data->offset;
 		$num_of_records = 9;
-		$data['list'] = $this->foodiary_m->get_food_records('food_records', $offset, $num_of_records);
+		$data = $this->foodiary_m->get_food_records('food_records', $offset, $num_of_records);
 		$this->returnFoods($data);
 	}
 	
 	function returnFoods($data)
 	{
 		$i=1;
-		foreach ($list as $lt)
+		foreach ($data as $lt)
 		{
 			$file_info = explode(".", $lt->file_name);
 			if(is_file('./uploads/'.$file_info[0]."_thumb.".$file_info[1]))
