@@ -34,7 +34,7 @@
 				<input type="hidden" class="geo-location" id="geo-long-input" name="geo-long" value="0.0">
 			</div>
 			<div id="rating-area">
-				<div class="starrr"></div>
+				<div class="starrr upload"></div>
 				<input type="hidden" class="rating-location" id="rating-val" name="ratings" value="0">
 			</div>
 			<div id="btn-area">

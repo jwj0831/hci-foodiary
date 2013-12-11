@@ -40,7 +40,9 @@ footer div {
 /*
  * main grid page part
  */
-
+#products {
+	margin-top: 20px;
+}
 
 #main_grid {
 	margin-top: 10px;
@@ -146,7 +148,7 @@ footer div {
 }
 
 
-.starrr{
+.starrr .upload{
 	text-align: center;
 	font-size: 40px;
 }

@@ -28,8 +28,11 @@ class Foods extends CI_Controller {
 	
 	public function index()
 	{
-		if (BROWSER_TYPE == 'W'){	
-			$this->load->view('foods/foods_v');
+		if (BROWSER_TYPE == 'W'){
+
+			$num_of_records = 9;
+			$data['list'] = $this->foodiary_m->get_food_records('food_records', $num_of_records);
+			$this->load->view('foods/foods_v', $data);
 		}
 		else if (BROWSER_TYPE == 'M'){
 			$this->load->view('mobile/foods/m_foods_v');
@@ -59,11 +62,6 @@ class Foods extends CI_Controller {
 			$this->load->view('mobile/m_footer_v');
 		}
 		
-	}
-	
-	public function main_grid()
-	{
-		$this->load->view('foods/main_grid_v');	
 	}
 	
 	public function new_food()
