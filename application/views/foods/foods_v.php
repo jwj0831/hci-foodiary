@@ -17,7 +17,9 @@ foreach ($list as $lt)
 ?>
 	        <div class="item  col-xs-4 col-lg-4">
 	            <div class="thumbnail">
-	                <img id="food_img" class="group list-group-image" src="<?php echo $thumb_img; ?>" alt="" />
+	               <a href="<?php echo '/hci-foodiary/foods/record/'.$lt->id ?>" class="food_record_link">
+	               		<img id="food_img" class="group list-group-image" src="<?php echo $thumb_img; ?>" alt="" />
+	               </a>
 	                <div class="caption">
 	                    <div class="row">
 	                        <div class="col-md-7">

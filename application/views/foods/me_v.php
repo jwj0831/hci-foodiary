@@ -1,4 +1,4 @@
-<div id="mainWrapper">
+<div class="mainWrapper">
 	<div id="container">
 		<div class="">
 			<div class="input-group">

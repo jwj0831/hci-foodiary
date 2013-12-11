@@ -27,8 +27,8 @@ class Foodiary_m extends CI_Model
 			'detail_info' => serialize($detail),
 			'food_name' => $arrays['food_name'],
 			'ratings' => (int) $arrays['ratings'],
-			'geo_lat' => (float) $arrays['geo_lat'],
-			'geo_long' => (float) $arrays['geo_long'],
+			'geo_lat' => $arrays['geo_lat'],
+			'geo_long' => $arrays['geo_long'],
 			'comments' => $arrays['comments'],
 			'reg_date' => date("Y-m-d H:i:s")
 		);
@@ -41,7 +41,7 @@ class Foodiary_m extends CI_Model
 	{
 		$sql = "SELECT * FROM ".$table." WHERE id='".$id."'";
    		$query = $this->db->query($sql);
-		$result = $query->result();
+		$result = $query->row();
 		return $result;
 	}
 	

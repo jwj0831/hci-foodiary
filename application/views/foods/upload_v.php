@@ -30,8 +30,8 @@
 			</div>
 			<div id="geoLoc-area">
 				<input type="hidden" class="geo-location" id="geo-result-input" name="geo-result" value="GEO_OK">
-				<input type="hidden" class="geo-location" id="geo-lat-input" name="geo-lat" value="0.0">
-				<input type="hidden" class="geo-location" id="geo-long-input" name="geo-long" value="0.0">
+				<input type="hidden" class="geo-location" id="geo-lat-input" name="geo_lat" value="0.0">
+				<input type="hidden" class="geo-location" id="geo-long-input" name="geo_long" value="0.0">
 			</div>
 			<div id="rating-area">
 				<div class="starrr upload"></div>

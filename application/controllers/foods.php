@@ -64,7 +64,13 @@ class Foods extends CI_Controller {
 		}
 		
 	}
-
+	
+	public function record()
+	{
+		$id = $this->uri->segment(3);
+		$data['food'] = $this->foodiary_m->get_food('food_records', $id);
+		$this->load->view('foods/food_v', $data);
+	}
 }
 
 /* End of file welcome.php */
