@@ -7,7 +7,7 @@
 
 <?php
 	$attr = array( 'role' => 'form', 'id' => 'upload_action','method' => 'post' );
- 	echo form_open_multipart('/foods/new_food', $attr);
+ 	echo form_open_multipart('', $attr);
 ?>
 
 
