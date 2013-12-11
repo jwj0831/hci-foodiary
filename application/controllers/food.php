@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Foods extends CI_Controller {
+class Food extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.

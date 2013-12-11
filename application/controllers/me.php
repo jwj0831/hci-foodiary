@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Foods extends CI_Controller {
+class Me extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -23,19 +23,15 @@ class Foods extends CI_Controller {
 		parent::__construct();
 		$this->load->database();
 		$this->load->model('foodiary_m');
-		$this->load->helper(array('form', 'url'));
 	}
 	
 	public function index()
 	{
 		if (BROWSER_TYPE == 'W'){
-			$offset = 0;
-			$num_of_records = 9;
-			$data['list'] = $this->foodiary_m->get_food_records('food_records', $offset, $num_of_records);
-			$this->load->view('foods/foods_v', $data);
+			$this->load->view('foods/me_v');
 		}
 		else if (BROWSER_TYPE == 'M'){
-			$this->load->view('mobile/foods/m_foods_v');
+			$this->load->view('mobile/foods/m_me_v');
 		}	
 	}
 	
@@ -63,6 +59,11 @@ class Foods extends CI_Controller {
 			$this->load->view('mobile/m_footer_v');
 		}
 		
+	}
+	
+	public function me()
+	{
+		$this->load->view('foods/me_v');
 	}
 
 }

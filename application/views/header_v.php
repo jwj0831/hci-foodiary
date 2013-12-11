@@ -46,10 +46,10 @@
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav pull">
 							<li>
-								<a href="/hci-foodiary/foods/new_food"><i class="fa fa-plus"></i> New</a>
+								<a href="/hci-foodiary/new_food"><i class="fa fa-plus"></i> New</a>
 							</li>
 							<li>
-								<a href="/hci-foodiary/foods/me"><i class="fa fa-user"></i> Me</a>
+								<a href="/hci-foodiary/me"><i class="fa fa-user"></i> Me</a>
 							</li>
 							
 						</ul>
