@@ -38,9 +38,13 @@ if(empty($ses_user)) {
 	
 <?php
 } else {
-	echo '<img src="https://graph.facebook.com/'. $ses_user['id'] .'/picture" width="30" height="30"/><div>'.$ses_user['name'].'</div>';	
-	echo '<a href="'.$this->session->userdata('logout').'">Logout</a>';
-		
+?>	
+	<script>
+		window.location.href = "http://117.16.146.70/hci-foodiary";
+	</script>		
+	//echo '<img src="https://graph.facebook.com/'. $ses_user['id'] .'/picture" width="30" height="30"/><div>'.$ses_user['name'].'</div>';	
+	//echo '<a href="'.$this->session->userdata('logout').'">Logout</a>';
+<?php	
 }
 ?>
 <div id="fb-root"></div>
