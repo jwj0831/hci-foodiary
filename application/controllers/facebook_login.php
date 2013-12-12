@@ -68,8 +68,7 @@ class Facebook_login extends CI_Controller {
 			try{
 				$user_profile = $facebook->api('/me');
 				$params = array('next' => $base_url.'facebook_login/logout');
-				$sess_user = array('User' => $user_profile,
-						'logout' => $facebook->getLogoutUrl($params));
+				$sess_user = array('User' => $user_profile, 'logout' => $facebook->getLogoutUrl($params));
 				$this->session->set_userdata($sess_user);
 				header('Location: '.$base_url);
 			}catch(FacebookApiException $e){
