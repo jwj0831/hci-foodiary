@@ -23,6 +23,9 @@
 
 footer div {
 	text-align: center;
+	position: relative;
+	bottom: 5px;
+	width: 100%;
 }
 
 /*
@@ -41,13 +44,16 @@ footer div {
 
 .glyphicon { margin-right:5px; }
 
-.thumbnail
+#grid_thumb
 {
     margin-bottom: 20px;
     padding: 0px;
-    -webkit-border-radius: 0px;
-    -moz-border-radius: 0px;
-    border-radius: 0px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 20px 1px #ccc;
+	-moz-box-shadow: 0px 0px 20px 1px #ccc;
+	box-shadow: 0px 0px 20px 1px #ccc;
 }
 
 .item.list-group-item
@@ -85,9 +91,12 @@ footer div {
     content: " ";
 }
 
-.thumbnail #food_img{
-	width: 400px;
+.thumbnail a #food_img{
+	width: 365px;
 	height: 250px;
+	-webkit-border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .item.list-group-item img
@@ -143,6 +152,23 @@ footer div {
 
 #img-thumb-area {
 	display: none;
+}
+
+#fileUpload {
+  /* Note: display:none on the input won't trigger the click event in WebKit.
+    Setting visibility: hidden and height/width:0 works great. */
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+#fileSelect {
+  /* style the button any way you want */
+ width: 80px;
+ height: 80px;
+}
+#fileSelect span {
+	font-size: 20px;
 }
 
 #food_name_input {

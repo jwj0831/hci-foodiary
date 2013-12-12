@@ -10,11 +10,22 @@
 ?>
 			<div class="thumbnail" id="food_img_thumb">
                 <img class="img-rounded" id="img-thumb-area" src="" alt="food_pic" />
-                <input id="input_img" name="userfile" type="file" accept="image/*;capture=camera" value="<?php echo set_value('userfile'); ?>" onchange="PreviewImage();"/>
+			</div>
+			<div class="form-group" id="food_name_input">
+				<input type="text" class="form-control" id="input_name" name="food_name" value="<?php echo set_value('food_name'); ?>" placeholder="Input Food's name">
+			</div>
+			<div class="img_input">
+				<input multiple id="fileUpload" name="userfile" accept="image/*;capture=camera" type="file" value="<?php echo set_value('userfile'); ?>" onchange="PreviewImage();"/>
+                <button type="button" id="fileSelect"class="btn btn-info"><span class="glyphicon glyphicon-camera"></span></button>
                 <script type="text/javascript">
+					document.querySelector('#fileSelect').addEventListener('click', function(e) {
+						// Use the native click() of the file input.
+					  	document.querySelector('#fileUpload').click();
+					}, false);
+					
 				    function PreviewImage() {
 				        var imageReader = new FileReader();
-				        imageReader.readAsDataURL(document.getElementById("input_img").files[0]);
+				        imageReader.readAsDataURL(document.getElementById("fileUpload").files[0]);
 				        imageReader.onload = function (oFREvent) {
 				            document.getElementById("img-thumb-area").src = oFREvent.target.result;
 				            document.getElementById("img-thumb-area").style.width = "400px";
@@ -24,9 +35,6 @@
 				        
 				    };
 				</script>
-			</div>
-			<div class="form-group" id="food_name_input">
-				<input type="text" class="form-control" id="input_name" name="food_name" value="<?php echo set_value('food_name'); ?>" placeholder="Enter Food's name">
 			</div>
 			<div id="geoLoc-area">
 				<input type="hidden" class="geo-location" id="geo-result-input" name="geo-result" value="GEO_OK">

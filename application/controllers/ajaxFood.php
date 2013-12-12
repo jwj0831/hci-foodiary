@@ -51,7 +51,9 @@ class AjaxFood extends CI_Controller {
 			}
 			echo '<div class="item  col-xs-4 col-lg-4">
 					<div class="thumbnail">
-						<img id="food_img" class="group list-group-image" src="'.$thumb_img.'" alt="" />
+						<a href="/hci-foodiary/foods/record/'.$lt->id.'" class="food_record_link">
+							<img id="food_img" class="group list-group-image" src="'.$thumb_img.'" alt="" />
+						</a>
 							<div class="caption">
 								<div class="row">
 									<div class="col-md-7">';
@@ -66,7 +68,7 @@ class AjaxFood extends CI_Controller {
 			}
 			echo 						'<p class="food_names">'.$food_name.'</p>
 									</div>
-	                        		<div class="=col-md-5">
+	                        		<div class="col-md-5">
 	                        			<div id="rating bar" class="pull-right">';
 			$i=0;
 			for($i=0; $i <$lt->ratings; $i++)

@@ -16,7 +16,7 @@ foreach ($list as $lt)
 	}
 ?>
 	        <div class="item  col-xs-4 col-lg-4">
-	            <div class="thumbnail">
+	            <div class="thumbnail" id="grid_thumb">
 	               <a href="<?php echo '/hci-foodiary/foods/record/'.$lt->id ?>" class="food_record_link">
 	               		<img id="food_img" class="group list-group-image" src="<?php echo $thumb_img; ?>" alt="" />
 	               </a>
@@ -36,7 +36,7 @@ foreach ($list as $lt)
 	                        	?>
 	                            <p class="food_names"><?php echo $food_name; ?></p>
 	                        </div>
-	                        <div class="=col-md-5">
+	                        <div class="col-md-5">
 	                        	<div id="rating bar" class="pull-right">
 <?php
 $i=0;
