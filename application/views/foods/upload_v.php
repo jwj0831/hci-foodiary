@@ -14,7 +14,7 @@
 			<div class="form-group" id="food_name_input">
 				<input type="text" class="form-control" id="input_name" name="food_name" value="<?php echo set_value('food_name'); ?>" placeholder="Input Food's name">
 			</div>
-			<div class="img_input">
+			<div id="img_input">
 				<input multiple id="fileUpload" name="userfile" accept="image/*;capture=camera" type="file" value="<?php echo set_value('userfile'); ?>" onchange="PreviewImage();"/>
                 <button type="button" id="fileSelect"class="btn btn-info"><span class="glyphicon glyphicon-camera"></span></button>
                 <script type="text/javascript">
@@ -45,6 +45,14 @@
 				<div class="starrr upload"></div>
 				<input type="hidden" class="rating-location" id="rating-val" name="ratings" value="0">
 			</div>
+			<dvi class="comment_area">
+				<div id="panel-area" class="panel panel-default">
+					<div class="panel-heading">Comments</div>
+				  	<div class="panel-body">
+						<textarea class="form-control" id="input_comments" name="comments" value="<?php echo set_value('comments'); ?>"  rows="3" placeholder="Write your comments"></textarea>
+					</div>
+				</div>
+			</dvi>
 			<div id="btn-area">
 				<button type="button" class="btn btn-primary" id="upload-btn">Send</button>
 			</div>

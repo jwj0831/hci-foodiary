@@ -1,6 +1,6 @@
-<div id="upload_page" class="mainWrapper">
-	<div id="upload_container">
-		<div id="upload_title">
+<div id="food_page" class="mainWrapper">
+	<div id="food_container">
+		<div id="food_title">
 			<div>Your Food Records</div>
 		</div>
 		<div class="food_area">
@@ -19,18 +19,16 @@
 			<div class="thumbnail" id="food_img_thumb">
                 <img class="img-rounded" id="food-record-img-thumb" src="<?php echo $thumb_img; ?>" alt="food_pic" />
 			</div>
-			<div class="form-group" id="food_name_input">
-				<?php echo $food->food_name; ?>
-			</div>
-			<div class="form-group" id="food_name_input">
+			<div class="form-group" id="reg_date">
 				<?php echo $food->reg_date; ?>
 			</div>
-			<div class="form-group" id="food_name_input">
-				<?php echo $food->geo_lat; ?>
+			<div class="form-group" id="food_name">
+				<?php echo $food->food_name; ?>
 			</div>
-			<div class="form-group" id="food_name_input">
-				<?php echo $food->geo_long; ?>
+			<div class="form-group" id="food_comments">
+				<?php echo $food->comments; ?>
 			</div>
+
 			<script type="text/javascript">
   window.onload = function() {
     initialize();

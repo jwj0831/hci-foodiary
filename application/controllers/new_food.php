@@ -67,6 +67,7 @@ class New_food extends CI_Controller {
 		$this->load->library('form_validation');
 		
 		$this->form_validation->set_rules('food_name', 'Food Name', 'required|max_length[12]');
+		$this->form_validation->set_rules('comments', 'Comments', 'required');
 		//$this->form_validation->set_rules('food_img', 'Food Image', 'required');
 		
 		if( $this->form_validation->run() == FALSE )
@@ -96,8 +97,7 @@ class New_food extends CI_Controller {
 				$upload_data['ratings'] = $this->input->post('ratings', true);
 				$upload_data['geo_lat'] = $this->input->post('geo_lat', true);
 				$upload_data['geo_long'] = $this->input->post('geo_long', true);
-				$upload_data['comments'] = "Test Comments";
-				//$upload_data['comments'] = $this->input->post('comments', true);
+				$upload_data['comments'] = $this->input->post('comments', true);
 				
 				$result = $this->foodiary_m->insert_new_food_records($upload_data);
 				
