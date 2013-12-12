@@ -9,6 +9,15 @@
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
 		<script src="/hci-foodiary/static/scripts/jquery.starrr.js" type="text/javascript"></script>
 		<script type="text/javascript">
+			$('#facebook').click(function(e) {
+		    	FB.login(function(response) {
+			  		if(response.authResponse) {
+				  		parent.location ='facebook_login/login';
+			  		}
+		 		},{scope: 'email,read_stream,publish_stream,user_birthday,user_location,user_work_history,user_hometown,user_photos'});
+			});
+		
+		
 	    	$(document).ready(function() {
 				// input rating value
 				$('.starrr').on('starrr:change', function(e, value){
