@@ -16,7 +16,10 @@
 			  		}
 		 		},{scope: 'email,read_stream,publish_stream,user_birthday,user_location,user_work_history,user_hometown,user_photos'});
 			});
-		
+			
+			$('#login_cancle').click(function(){
+				window.location.href = "http://117.16.146.70/hci-foodiary";
+			});
 		
 	    	$(document).ready(function() {
 				// input rating value
