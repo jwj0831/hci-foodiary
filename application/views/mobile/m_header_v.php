@@ -2,8 +2,8 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="viewport" content="width=device-width,initial-scale=1, user-scalable=no" />
 		<meta name="description" content="">
 		<meta name="author" content="">
 		<link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
@@ -52,7 +52,6 @@
 								<a href="/hci-foodiary/me"><i class="fa fa-user"></i> Me</a>
 							</li>
 						</ul>
-						
 <?php
 	if( @$this->session->userdata('logged_in') == TRUE ) {
 		$ses_user=$this->session->userdata('User');
