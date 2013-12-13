@@ -18,7 +18,7 @@
 		
 		<!-- Custom styles for this template -->
 		<link rel="stylesheet" type="text/css" href="/hci-foodiary/static/css/global.css" >
-		<link rel="stylesheet" type="text/css" href="/hci-foodiary/static/css/foodiary_w.css" >
+		<link rel="stylesheet" type="text/css" href="/hci-foodiary/static/css/foodiary_m.css" >
 		
 
 
