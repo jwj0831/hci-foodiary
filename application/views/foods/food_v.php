@@ -25,9 +25,6 @@
 			<div class="form-group" id="reg_date">
 				<?php echo $food->reg_date; ?>
 			</div>
-			<div class="form-group" id="reg_date">
-				<?php echo $food->reg_date; ?>
-			</div>
 			<div class="form-group" id="food_name">
 				<?php echo $food->food_name; ?>
 			</div>

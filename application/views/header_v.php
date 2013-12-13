@@ -8,7 +8,7 @@
 		<meta name="author" content="">
 		<link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
 
-		<title>Starter Template for Bootstrap</title>
+		<title>Welcome to Foodiary</title>
 	
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
@@ -74,5 +74,3 @@ else {
 					</div><!--/.nav-collapse -->
 				</div>
 			</div>
-		
-		
