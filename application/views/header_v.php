@@ -63,7 +63,7 @@
 }
 else {
 ?>
-							<a href="/faceboo_login" id="login_btn"  class="btn btn-primary" role="button">Log In</a>
+							<a href="/hci-foodiary/facebook_login" id="login_btn"  class="btn btn-default" role="button">Log In</a>
 <?php
 }
 ?>
