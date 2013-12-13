@@ -105,7 +105,8 @@ class New_food extends CI_Controller {
 			} // form_validation if block
 		} // session if block
 		else{
-			alert('Please login to upload' , '/hci-foodiary/');
+			alert('Please login to upload');
+			redirect('/'); exit;
 		}
 	} // upload function
 }
