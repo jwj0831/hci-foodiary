@@ -1,5 +1,5 @@
 <div id="foods_page" class="mainWrapper">
-	<div id="food_container">
+	<div id="foods_container">
 		<div id="foods" class="row list-group">
 <?php
 $i=1;

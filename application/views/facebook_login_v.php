@@ -5,8 +5,6 @@ $ses_user=$this->session->userdata('User');
 
 if(empty($ses_user)) {
 ?>
-	
-
 <div class="container">
 	<div class="row">
 		<form  id="login_form" class="form-signin mg-btm">
@@ -42,8 +40,6 @@ if(empty($ses_user)) {
 	<script>
 		window.location.href = "http://117.16.146.70/hci-foodiary";
 	</script>		
-	//echo '<img src="https://graph.facebook.com/'. $ses_user['id'] .'/picture" width="30" height="30"/><div>'.$ses_user['name'].'</div>';	
-	//echo '<a href="'.$this->session->userdata('logout').'">Logout</a>';
 <?php	
 }
 ?>
@@ -63,6 +59,4 @@ if(empty($ses_user)) {
         js.src = "//connect.facebook.net/en_US/all.js";
         ref.parentNode.insertBefore(js, ref);
 	}(document));
- 
-
 </script>

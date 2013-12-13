@@ -51,8 +51,23 @@
 							<li>
 								<a href="/hci-foodiary/me"><i class="fa fa-user"></i> Me</a>
 							</li>
-							
 						</ul>
+						<div id="login_info" class="pull-right">
+<?php
+	if( @$this->session->userdata('loggded_in') == TRUE ) {
+		$ses_user=$this->session->userdata('User');
+?>
+							<img src="https://graph.facebook.com/<?php echo $ses_user['id']; ?>/picture" width="30" height="30"/> <p><?php echo $ses_user['name']; ?></p>';	
+							<a href="'.$this->session->userdata('logout').'">Logout</a>';
+<?php 
+}
+else {
+?>
+							<a href="/faceboo_login" id="login_btn"  class="btn btn-primary" role="button">Log In</a>
+<?php
+}
+?>
+						</div>
 					</div><!--/.nav-collapse -->
 				</div>
 			</div>

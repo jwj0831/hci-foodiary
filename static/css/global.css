@@ -1,5 +1,3 @@
-@import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css);
-
 body {
 	background-image: url('../images/bg_repeat.png');
 }
@@ -29,4 +27,8 @@ body {
 .btn-danger:active {
     margin-top: 3px;
     margin-bottom: -3px;
+}
+
+#login_info {
+	padding-top: 5px;
 }
