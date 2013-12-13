@@ -32,3 +32,11 @@ body {
 .login_out_info {
 	padding-top: 5px;
 }
+
+
+footer div {
+	text-align: center;
+	position: relative;
+	bottom: 5px;
+	width: 100%;
+}
