@@ -1,21 +1,5 @@
 
-.foodiary-template {
-  padding: 40px 15px;
-  text-align: center;
-}
-
-footer p {
-	text-align: center;
-}
-.js-masonry{
-	margin: 0 auto;
-}
-.item {
-  width:  160px;
-  height: 60px;
-  float: left;
-  background: #D26;
-  border: 2px solid #3533;
-  border-radius: 5px;
-  margin-bottom: 10px;
+#wrapper .container-top {
+	width: 920px;
+	margin: auto;
 }
