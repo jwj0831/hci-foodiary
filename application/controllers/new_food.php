@@ -59,53 +59,54 @@ class New_food extends CI_Controller {
 			
 			$this->load->view('mobile/m_footer_v');
 		}
-		
 	}
 	
 	public function upload()
 	{
-		$this->load->library('form_validation');
-		
-		$this->form_validation->set_rules('food_name', 'Food Name', 'required|max_length[12]');
-		$this->form_validation->set_rules('comments', 'Comments', 'required');
-		//$this->form_validation->set_rules('food_img', 'Food Image', 'required');
-		
-		if( $this->form_validation->run() == FALSE )
-		{
-			$this->load->view('foods/upload_v');
-		}
-		else
-		{
-			$config = array(
-				'upload_path' => 'uploads/',
-				'allowed_types' => 'gif|jpg|png',
-				'encrypt_name' => TRUE,
-				'max_size' => '5000'
-			);
+		if( @$this->session->userdata('logged_in') == TRUE ) {
+			$this->load->library('form_validation');
 			
-			$this->load->library('upload', $config);
-			if ( !$this->upload->do_upload() )
-			{
-				$data['error'] = $this->upload->display_errors();
-				$this->load->view('foods/upload_v', $data);
+			$this->form_validation->set_rules('food_name', 'Food Name', 'required|max_length[12]');
+			$this->form_validation->set_rules('comments', 'Comments', 'required');
+			//$this->form_validation->set_rules('food_img', 'Food Image', 'required');
+			
+			if( $this->form_validation->run() == FALSE ) {
+				$this->load->view('foods/upload_v');
 			}
-			else 
-			{
-				$upload_data = $this->upload->data();
-				$upload_data['user_id'] = "NFM";	// Temp
-				$upload_data['food_name'] = $this->input->post('food_name', true);
-				$upload_data['ratings'] = $this->input->post('ratings', true);
-				$upload_data['geo_lat'] = $this->input->post('geo_lat', true);
-				$upload_data['geo_long'] = $this->input->post('geo_long', true);
-				$upload_data['comments'] = $this->input->post('comments', true);
+			else {
+				$config = array(
+					'upload_path' => 'uploads/',
+					'allowed_types' => 'gif|jpg|png',
+					'encrypt_name' => TRUE,
+					'max_size' => '5000'
+				);
 				
-				$result = $this->foodiary_m->insert_new_food_records($upload_data);
-				
-				redirect('/'); exit;
-			}
+				$this->load->library('upload', $config);
+				if ( !$this->upload->do_upload() ) {
+					$data['error'] = $this->upload->display_errors();
+					$this->load->view('foods/upload_v', $data);
+				}
+				else {
+					$ses_user = $this->session->userdata('User');
+					
+					$upload_data = $this->upload->data();
+					$upload_data['user_id'] = $ses_user['name'];
+					$upload_data['food_name'] = $this->input->post('food_name', true);
+					$upload_data['ratings'] = $this->input->post('ratings', true);
+					$upload_data['geo_lat'] = $this->input->post('geo_lat', true);
+					$upload_data['geo_long'] = $this->input->post('geo_long', true);
+					$upload_data['comments'] = $this->input->post('comments', true);
+					
+					$result = $this->foodiary_m->insert_new_food_records($upload_data);
+					
+					redirect('/'); exit;
+				} // do_upload if block
+			} // form_validation if block
+		} // session if block
+		else{
+			alert('Please login to upload');
 		}
-	}
-
+	} // upload function
 }
 
 /* End of file welcome.php */

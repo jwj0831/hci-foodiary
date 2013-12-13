@@ -57,14 +57,14 @@
 	if( @$this->session->userdata('logged_in') == TRUE ) {
 		$ses_user=$this->session->userdata('User');
 ?>
-					<div id="logged_info" class="col-md-3 pull-right">
-							<img src="https://graph.facebook.com/<?php echo $ses_user['id']; ?>/picture" width="30" height="30"/> <label id="user_name"><?php echo $ses_user['name']; ?></label>';	
+					<div id="logged_info" class="login_out_info col-md-3 pull-right">
+							<img src="https://graph.facebook.com/<?php echo $ses_user['id']; ?>/picture" width="30" height="30"/> <label id="user_name"><?php echo $ses_user['name']; ?></label>	
 							<a href="<?php echo $this->session->userdata('logout'); ?>" id="logout_btn"  class="btn btn-default" role="button">Log Out</a>
 					</div>
 <?php 
 }
 else {
-?>						<div id="login_info" class="pull-right">
+?>						<div id="login_info" class="login_out_info pull-right">
 							<a href="/hci-foodiary/facebook_login" id="login_btn"  class="btn btn-default" role="button">Log In</a>
 						</div>
 <?php
