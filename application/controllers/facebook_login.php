@@ -8,6 +8,7 @@ class Facebook_login extends CI_Controller {
 	{
 		parent::__construct();
 		$this->config->load('facebook');
+		$this->load->helper('alert');
 	}
 	
 	public function index()
@@ -80,7 +81,7 @@ class Facebook_login extends CI_Controller {
 			}catch(FacebookApiException $e){
 				error_log($e);
 				$user = NULL;
-				//alert('Failed to Login with Facebook Account');
+				alert('Failed to Login with Facebook Account', '/hci-foodiary');
 				header('Location: '.$base_url);
 			}
 		}
