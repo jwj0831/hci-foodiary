@@ -28,9 +28,8 @@ class New_food extends CI_Controller {
 	
 	public function index()
 	{
-		
 			if (BROWSER_TYPE == 'W'){
-				$this->upload();
+				upload();
 			}
 			else if (BROWSER_TYPE == 'M'){
 				$this->load->view('mobile/foods/m_upload_v');
