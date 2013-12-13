@@ -54,7 +54,7 @@
 						</ul>
 						<div id="login_info" class="pull-right">
 <?php
-	if( @$this->session->userdata('loggded_in') == TRUE ) {
+	if( @$this->session->userdata('logged_in') == TRUE ) {
 		$ses_user=$this->session->userdata('User');
 ?>
 							<img src="https://graph.facebook.com/<?php echo $ses_user['id']; ?>/picture" width="30" height="30"/> <p><?php echo $ses_user['name']; ?></p>';	
