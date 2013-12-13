@@ -94,7 +94,7 @@ class New_food extends CI_Controller {
 				$ses_user = $this->session->userdata('User');
 				
 				$upload_data = $this->upload->data();
-				$upload_data['user_id'] = $ses_user['name'];
+				$upload_data['user_name'] = $ses_user['name'];
 				$upload_data['food_name'] = $this->input->post('food_name', true);
 				$upload_data['ratings'] = $this->input->post('ratings', true);
 				$upload_data['geo_lat'] = $this->input->post('geo_lat', true);

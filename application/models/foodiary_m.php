@@ -20,7 +20,7 @@ class Foodiary_m extends CI_Model
 		);	
 		
 		$insert_array = array(
-			'user_id' => $arrays['user_id'],
+			'user_name' => $arrays['user_name'],
 			'file_path' => $arrays['file_path'],
 			'file_name' => $arrays['file_name'],
 			'original_name' => $arrays['orig_name'],

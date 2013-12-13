@@ -19,6 +19,12 @@
 			<div class="thumbnail" id="food_img_thumb">
                 <img class="img-rounded" id="food-record-img-thumb" src="<?php echo $thumb_img; ?>" alt="food_pic" />
 			</div>
+			<div class="form-group" id="user_name">
+				<?php echo $food->user_name; ?>
+			</div>
+			<div class="form-group" id="reg_date">
+				<?php echo $food->reg_date; ?>
+			</div>
 			<div class="form-group" id="reg_date">
 				<?php echo $food->reg_date; ?>
 			</div>
