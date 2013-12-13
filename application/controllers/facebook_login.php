@@ -80,7 +80,7 @@ class Facebook_login extends CI_Controller {
 			}catch(FacebookApiException $e){
 				error_log($e);
 				$user = NULL;
-				alert('Failed to Login with Facebook Account');
+				//alert('Failed to Login with Facebook Account');
 				header('Location: '.$base_url);
 			}
 		}
