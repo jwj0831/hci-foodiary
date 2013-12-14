@@ -9,6 +9,19 @@
 		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
 		<script src="/hci-foodiary/static/scripts/jquery.starrr.js" type="text/javascript"></script>
 		<script type="text/javascript">
+		
+			var pathArray = window.location.pathname.split( '/' );
+			var currentPage = pathArray[2];
+			
+			if(currentPage == "new_food") {
+				$("#mew_menu").addClass("active");
+				$("#me_menu").removeClass("active");
+			}
+			else if(currentPage == "me") {
+				$("#mew_menu").removeClass("active");
+				$("#me_menu").addClass("active");
+			}
+		
 			$('#facebook').click(function(e) {
 		    	FB.login(function(response) {
 			  		if(response.authResponse) {

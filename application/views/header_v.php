@@ -45,10 +45,10 @@
 					</div>
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav pull">
-							<li>
+							<li id="new_menu">
 								<a href="/hci-foodiary/new_food"><i class="fa fa-plus"></i> New</a>
 							</li>
-							<li>
+							<li id="me_menu">
 								<a href="/hci-foodiary/me"><i class="fa fa-user"></i> Me</a>
 							</li>
 						</ul>

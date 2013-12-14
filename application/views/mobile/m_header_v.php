@@ -11,7 +11,7 @@
 	
 		<!-- Latest compiled and minified CSS -->
 		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
-		
+		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css">
 		<!-- Font Awesome's CDN -->
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 		
@@ -31,6 +31,7 @@
 	</head>
 
 	<body>
+		<!--
 		<div id="wrapper">
 			<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="container-top">
@@ -69,6 +70,6 @@ else {
 }
 ?>
 						
-					</div><!--/.nav-collapse -->
+					</div>
 				</div>
-			</div>
+			</div>-->
