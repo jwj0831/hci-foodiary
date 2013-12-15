@@ -3,7 +3,7 @@
 		<div id="upload_title">
 			<div>Upload New Food Records</div>
 		</div>
-		<div class="upload_body">
+		<div id="upload_body">
 <?php
 	$attr = array( 'role' => 'form', 'id' => 'upload_action','method' => 'post' );
  	echo form_open_multipart('/new_food/upload', $attr);
@@ -97,7 +97,7 @@ if(@$error) {
 				}
 			</script>
 			</form>
-		</div><!-- .-->
-	</div><!-- #container -->
-</div><!-- #mainWrapper -->
+		</div><!--#upload_body-->
+	</div><!-- #upload_container -->
+</div><!-- #upload_page -->
 
