@@ -24,7 +24,10 @@
 	
 	#me_btn {
 		border: 0px;
-		margin-top: 12px;
+		margin-top: 4px;
+		margin-bottom: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
 		text-decoration: none;
 	}
 }
