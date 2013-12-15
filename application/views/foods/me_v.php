@@ -6,8 +6,8 @@
 		<div id="me_title">
 			<div>About your Profile</div>
 		</div>
-		<div class="me_body">
-			<div class="row">
+		<div id="me_body">
+			<div class="row" id="default_info">
 				<div id="me_user_img" class="col-md-3">
 					<img id="me_user_img" class="img-circle" src="https://graph.facebook.com/<?php echo $ses_user['id']; ?>/picture" />	
 				</div>
