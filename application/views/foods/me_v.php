@@ -8,13 +8,13 @@
 		</div>
 		<div id="me_body">
 			<div class="row" id="default_info">
-				<div id="me_user_img" class="col-md-3">
+				<div id="me_img_div" class="col-md-6 col-xs-12">
 					<img id="me_user_img" class="img-circle" src="https://graph.facebook.com/<?php echo $ses_user['id']; ?>/picture" />	
 				</div>
-				<div class="col-md-9">
+				<div class="col-md-6 col-xs-12">
 					<i class="fa fa-user"></i> <?php echo $ses_user['name']; ?>
 				</div>
-				<div class="col-md-9">
+				<div class="col-md-6 col-xs-12">
 					<i class="fa fa-envelope-o"></i> <?php echo $ses_user['email']; ?>
 				</div>
 			</div>
