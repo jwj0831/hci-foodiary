@@ -49,7 +49,7 @@ class Foods extends CI_Controller {
 	
 	public function _remap($method)
 	{
-		$this->load->view('header_v');
+			$this->load->view('header_v');
 		
 			if( method_exists($this, $method) )
 			{

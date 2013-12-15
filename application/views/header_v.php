@@ -48,33 +48,29 @@
 							<li id="new_menu">
 								<a href="/hci-foodiary/new_food"><i class="fa fa-plus"></i> New</a>
 							</li>
-							<!--
-							<li id="me_menu">
-								<a href="/hci-foodiary/me"><i class="fa fa-user"></i> Me</a>
-							</li>
-							-->
-						</ul>
-						
 <?php
 	if( @$this->session->userdata('logged_in') == TRUE ) {
 		$ses_user=$this->session->userdata('User');
-?>
-					<div id="logged_info" class="login_out_info col-md-3 pull-right">
-							<a href="/hci-foodiary/me" id="user_profile_link">
-								<img id="user_login_thumb" src="https://graph.facebook.com/<?php echo $ses_user['id']; ?>/picture" /> <label id="user_name"><?php echo $ses_user['name']; ?></label>	
-							</a>
-							<a href="<?php echo $this->session->userdata('logout'); ?>" id="logout_btn"  class="btn btn-default" role="button">Log Out</a>
-					</div>
+?>				
+							<li id="logged_info">
+								<a href="/hci-foodiary/me">
+									<img id="user_login_thumb" src="https://graph.facebook.com/<?php echo $ses_user['id']; ?>/picture" /> <label id="user_name"><?php echo $ses_user['name']; ?></label>
+								</a>
+							</li>
+							<li id="logged_info">
+								<a href="<?php echo $this->session->userdata('logout'); ?>"><i class="fa fa-plus"></i> log out</a>
+							</li>
 <?php 
 }
 else {
-?>						<div id="login_info" class="login_out_info pull-right">
-							<a href="/hci-foodiary/facebook_login" id="login_btn"  class="btn btn-default" role="button">Log In</a>
-						</div>
+?>	
+							<li id="logged_info">
+								<a href="/hci-foodiary/facebook_login" id="login_btn" >Log In</a>
+							</li>
+						</ul>
 <?php
 }
 ?>
-						
-					</div><!--/.nav-collapse -->
-				</div>
-			</div>
+					</div><!-- .nav-collapse -->
+				</div><!-- .container-top -->
+			</div><!-- .navbar -->

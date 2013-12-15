@@ -20,6 +20,7 @@ if(empty($ses_user)) {
 		                </a>
 					</div>
 				</div>
+				<!--
 				<div class="row">
 					<div class="col-md-12">
 		                <a href="#" class="btn btn-info btn-block" >
@@ -27,6 +28,7 @@ if(empty($ses_user)) {
 		                </a>
 		            </div>
 	          	</div>
+	          -->
 			</div>
       	</form>
 	</div>
