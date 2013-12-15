@@ -49,6 +49,15 @@ class Foods extends CI_Controller {
 	
 	public function _remap($method)
 	{
+		$this->load->view('header_v');
+		
+			if( method_exists($this, $method) )
+			{
+				$this->{"{$method}"}();
+			}
+			
+			$this->load->view('footer_v');
+		/*
 		if (BROWSER_TYPE == 'W'){
 			$this->load->view('header_v');
 		
@@ -69,7 +78,7 @@ class Foods extends CI_Controller {
 			
 			$this->load->view('mobile/m_footer_v');
 		}
-		
+		*/
 	}
 	
 	public function record()
