@@ -33,6 +33,15 @@ class Foodiary_m extends CI_Model
 		return $result;
 	}
 	
+	function get_like_food_num_about_user($user_name)
+	{
+		$sql = "SELECT id FROM like_records WHERE user_name='".$user_name."'";
+		
+		$query = $this->db->query($sql);
+		$result = $query->num_rows();
+		return $result;
+	}
+	
 	function update_like_num_in_food($id)
 	{
 		$sql = "SELECT like_num FROM food_records WHERE id='".$id."'";
@@ -108,5 +117,12 @@ class Foodiary_m extends CI_Model
 		return $result;
 	}
 	
+	function get_food_records_num_about_user($user_name)
+	{
+		$sql = "SELECT id FROM food_records WHERE user_name='".$user_name."'";
+   		$query = $this->db->query($sql);
+		$result = $query->num_rows();
+		return $result;
+	}
 }
 
