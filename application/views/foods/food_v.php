@@ -4,7 +4,7 @@
 			<div>Your Food Records</div>
 		</div>
 		<div id="food_body">
-			<div class="row">
+			<div class="row food_info_row">
 <?php
 	$file_info = explode(".", $food->file_name);
 	if(is_file('./uploads/'.$file_info[0]."_thumb.".$file_info[1]))
@@ -52,11 +52,11 @@ for(; $i < 5; $i++)
 					</div>
 				</div>
 			</div>
-			<div class="row">
+			<div class="row food_info_row">
 				<div class="panel panel-default">
-					<div class="panel-heading">Map</div>
-					<div class="panel-body">
-				    	<div id="map_canvas"style="width:400px; height:200px;"></div> 
+					<div class="panel-heading" id="map_panel_heading">Map</div>
+					<div class="panel-body" id="map_panel_body">
+				    	<div id="map_canvas"style="width:779px; height:240px;"></div> 
 				  	</div>
 				</div>			
 			</div>

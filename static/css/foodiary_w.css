@@ -212,6 +212,11 @@
 	
 }
 
+.food_info_row{
+	margin: 0px;
+	padding: 10px;
+}
+
 #food-record-img-thumb {
 	width: 365px;
 	height: 250px;
@@ -228,6 +233,13 @@
 	font-size: 16px;
 }
 
+#map_panel_heading {
+	text-align: center;
+}
+
+#map_panel_body {
+	padding: 0px;
+}
 
 
 /*
