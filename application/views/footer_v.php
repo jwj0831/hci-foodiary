@@ -31,7 +31,8 @@
 			}
 			else if(currentPage == "") {
 				// toolbar 
-				$(".thumbnail").hover(function(){
+				
+				$(".thumbnail").hover( function(){
 					$(this).children(".btn-toolbar").toggleClass('hidden_btn');
 				});
 				
@@ -126,8 +127,8 @@
 									loading = false;
 								},
 								success:function(result){
+									$(result).appendTo("#foods");
 									console.log(result);
-									$("#foods").innerHTML = result;
 									loading = false;
 									offset = offset + 9;
 								}

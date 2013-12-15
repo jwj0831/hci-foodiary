@@ -100,7 +100,7 @@ class AjaxFood extends CI_Controller {
 	               			</div>
 	                		<div class="caption food_info_area">
 	                    		<div class="row">
-	                        		<div class="col-md-6 col-xs-6">';
+	                        		<div class="col-md-8 col-xs-7">';
 			if (mb_strlen($lt->food_name, "utf-8") > 14 )
         	{
         		$food_name = mb_substr($lt->food_name, 0, 14, "utf-8");
@@ -113,7 +113,7 @@ class AjaxFood extends CI_Controller {
 			echo 					   '<span class="label label-primary">Name</span>
 	                           	 		<label class="food_names">'.$food_name.'</label>
 	                       		 	</div>
-	                        		<div class="col-md-6 col-xs-6">
+	                        		<div class="col-md-4 col-xs-5">
 	                        			<div id="rating bar" class="pull-right">';
 			$i=0;
 			for($i=0; $i <$lt->ratings; $i++)

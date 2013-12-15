@@ -46,7 +46,7 @@ foreach ($list as $lt)
 	               	</div>
 	                <div class="caption food_info_area">
 	                    <div class="row">
-	                        <div class="col-md-6 col-xs-6">
+	                        <div class="col-md-8 col-xs-7">
 	                        	<?php 
 	                        	if (mb_strlen($lt->food_name, "utf-8") > 14 )
 	                        	{
@@ -61,7 +61,7 @@ foreach ($list as $lt)
 	                        	<span class="label label-primary">Name</span>
 	                            <label class="food_names"> <?php echo $food_name; ?></label>
 	                        </div>
-	                        <div class="col-md-6 col-xs-6">
+	                        <div class="col-md-4 col-xs-5">
 	                        	<div id="rating bar" class="pull-right">
 <?php
 $i=0;
