@@ -19,8 +19,7 @@
 			}
 			else if(currentPage == "me") {
 				$("#new_menu").removeClass("active");
-				$("#me_menu").addCl
-				ass("active");
+				$("#me_menu").addClass("active");
 			}
 			
 			$(".thumb").hover(function(){
