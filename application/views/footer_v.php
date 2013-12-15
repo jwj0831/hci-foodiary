@@ -22,8 +22,8 @@
 				$("#me_menu").addClass("active");
 			}
 			
-			$('#btn-bar').hover(function(){
-				$('#btn-bar').toggleClass('hidden');
+			$('.item').hover(function(){
+				$('.btn-toolbar').toggleClass('hidden');
 			});
 			
 			$('#facebook').click(function(e) {
