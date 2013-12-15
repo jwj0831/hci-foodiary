@@ -19,11 +19,12 @@
 			}
 			else if(currentPage == "me") {
 				$("#new_menu").removeClass("active");
-				$("#me_menu").addClass("active");
+				$("#me_menu").addCl
+				ass("active");
 			}
 			
-			$('.item').hover(function(){
-				this.children().children().toggleClass('hidden_btn');
+			$("#grid_thumb").hover(function(){
+				this.children("#btn-bar").toggleClass('hidden_btn');
 				//$('.btn-toolbar').toggleClass('hidden_btn');
 			});
 			
