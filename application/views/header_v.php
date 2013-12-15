@@ -59,7 +59,7 @@ else {
 					<div class="collapse navbar-collapse">
 						<ul class="nav navbar-nav pull">
 							<li id="new_menu">
-								<a href="/hci-foodiary/new_food"><i class="fa fa-plus"></i> New</a>
+								<a href="/hci-foodiary/new_food"><span class="glyphicon glyphicon-plus"></span> New</a>
 							</li>
 <?php
 	// NOT Logged In?

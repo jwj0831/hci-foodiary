@@ -69,14 +69,39 @@ class AjaxFood extends CI_Controller {
 			{
 				$thumb_img = '/hci-foodiary/uploads/'.$lt->file_name;
 			}
-			echo '<div class="item  col-xs-4 col-lg-4">
+			echo '<div class="item col-md-4">
 					<div class="thumbnail">
-						<a href="/hci-foodiary/foods/record/'.$lt->id.'" class="food_record_link">
-							<img id="food_img" class="group list-group-image" src="'.$thumb_img.'" alt="" />
+		        		<div class="btn-toolbar hidden_btn">
+						  	<div class="btn-group">
+						  		<button type="button" value="'.$lt->id.'"&"'.$lt->user_name.'" class="btn btn-default thumbs_btn" role="button"><i class="fa fa-thumbs-up"></i></button>
+					  			<button type="button" value="'.$lt->id.' class="btn btn-default share_btn"><i class="fa fa-share-square"></i></button>
+					  		</div>
+					  		<div class="btn-group">
+					  			<button type="button" value='.$lt->id.' class="btn btn-default del_btn"><i class="fa fa-trash-o"></i></button>
+					  		</div>
+						</div>
+	        		
+	            		<a href="/hci-foodiary/foods/record/'.$lt->id.'" class="food_record_link">
+							<img class="food_img img-rounded" src="'.$thumb_img.'" alt="" />
 						</a>
-							<div class="caption">
+							<div class="caption user_info_area">
 								<div class="row">
-									<div class="col-md-7">';
+									<div class="col-md-6 col-xs-6">
+		               					<img src="'.$lt->user_img.'" alt="user_img" class="user_thumb" />
+		               					<label for="" class="user_name">';
+		               					echo $lt->user_name;
+		    echo 					   '</label>
+		               			
+		               				</div>
+		               				<div class="col-md-6 col-xs-6 like_div">
+		               					<label class="like_label"><span class="badge like_num">'.$lt->like_num.'</span> likes</label>
+		               				</div>
+		               			</div>
+	               			</div>
+	                		<div class="caption food_info_area">
+	                    		<div class="row">
+	                        		<div class="col-md-6 col-xs-6">';
+									
 			if (mb_strlen($lt->food_name, "utf-8") > 14 )
         	{
         		$food_name = mb_substr($lt->food_name, 0, 14, "utf-8");
@@ -86,9 +111,10 @@ class AjaxFood extends CI_Controller {
 			{
 				$food_name = $lt->food_name;
 			}
-			echo 						'<p class="food_names">'.$food_name.'</p>
-									</div>
-	                        		<div class="col-md-5">
+			echo 					   '<span class="label label-primary">Name</span>
+	                           	 		<label class="food_names">'.$food_name.'</label>
+	                       		 	</div>
+	                        		<div class="col-md-6 col-xs-6">
 	                        			<div id="rating bar" class="pull-right">';
 			$i=0;
 			for($i=0; $i <$lt->ratings; $i++)
