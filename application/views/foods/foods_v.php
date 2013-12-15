@@ -30,21 +30,21 @@ foreach ($list as $lt)
 	            	<a href="<?php echo '/hci-foodiary/foods/record/'.$lt->id ?>" class="food_record_link">
 	                	<img id="food_img" class="img-rounded" src="<?php echo $thumb_img; ?>" alt="" />
 	               	</a>
-	               	<div id="user_info_area" class="caption">
+	               	<div class="caption user_info_area">
 	               		<div class="row">
 		               		<div class="col-md-7">
-		               			<img src="<?php echo $lt->user_img; ?>" alt="user_img" id="user_thumb" />
-		               			<label for="" id="user_name">
+		               			<img src="<?php echo $lt->user_img; ?>" alt="user_img" class="user_thumb" />
+		               			<label for="" class="user_name">
 		               				<?php echo $lt->user_name; ?>
 		               			</label>
 		               			
 		               		</div>
-		               		<label id="like_label" class="col-md-5">
-		               			liked <span class="badge"><?php echo $lt->like_num; ?></span> peoples
+		               		<label class="col-md-5 like_label">
+		               			liked <span class="badge like_num"><?php echo $lt->like_num; ?></span> peoples
 		               		</label>
 		               	</div>
 	               	</div>
-	                <div id="food_info_area" class="caption">
+	                <div class="caption food_info_area">
 	                    <div class="row">
 	                        <div class="col-md-7">
 	                        	<?php 

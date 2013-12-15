@@ -70,23 +70,23 @@
 	z-index: 1;	
 }
 
-#user_info_area {
+.user_info_area {
 	border-bottom: 1px solid #ddd;
 	padding: 10px 5px;
 }
 
-#user_thumb {
+.user_thumb {
 	width: 30px;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
 
-#like_label {
+.like_label {
 	text-align: right;
 }
 
-#food_info_area {
+.food_info_area {
 	padding: 10px 5px;
 }
 

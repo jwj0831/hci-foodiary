@@ -36,14 +36,15 @@ class AjaxFood extends CI_Controller {
 		$food_id = $data->food_id;
 		$user_name = $data->user_name;
 		
-		$check_val = $this->foodiary_m->check_like_food($user_name, $food_id);
+		$check_val = $this->foodiary_m->get_like_food_num($user_name, $food_id);
 		
 		if($check_val > 0) {
-			return "You Already Checked!";
+			//echo "You Already Checked!";
 		}
 		else {
+			$updated_like_num = $this->foodiary_m->update_like_num_in_food($food_id);
 			$data = $this->foodiary_m->add_like_food($user_name, $food_id);
-			return "Thumbs Up!";
+			echo $updated_like_num;
 		}
 	}
 	

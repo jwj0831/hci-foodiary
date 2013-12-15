@@ -57,7 +57,10 @@
 						loading = false;
 					},
 					success:function(result){
-						console.log(result);
+						//console.log(result);
+						var rootObj = $(this).parent(".btn-group").parent(".btn-toolbar").parent(".thumb");
+						rootObj.children(".user_info_area").children(".row").children(".like_label").children(".like_num").html(result);
+					
 					}
 				});
 				

@@ -19,12 +19,34 @@ class Foodiary_m extends CI_Model
 		$this->db->insert('like_records', $insert_array);	
 	}
 	
-	function check_like_food($user_name, $food_id)
+	function get_like_food_num($user_name, $food_id)
 	{
-		$sql = "SELECT * FROM like_records WHERE user_name='".$user_name."' AND food_id='".$food_id."'";
-   		$query = $this->db->query($sql);
+		if($user_name == ""){
+			$sql = "SELECT id FROM like_records WHERE food_id='".$food_id."'";
+		}
+		else {
+			$sql = "SELECT id FROM like_records WHERE user_name='".$user_name."' AND food_id='".$food_id."'";
+		}
+		
+		$query = $this->db->query($sql);
 		$result = $query->num_rows();
 		return $result;
+	}
+	
+	function update_like_num_in_food($id)
+	{
+		$sql = "SELECT like_num FROM food_records WHERE id='".$id."'";
+   		$query = $this->db->query($sql);
+		$result = $query->row();
+		$cuurent_like_num = $result->like_num;
+		$updated_like_num = $cuurent_like_num + 1;
+		$data = array(
+			'like_num' => $updated_like_num
+		);
+		$this->db->where('id', $id);
+		$this->db->update('food_records', $data); 
+		
+		return $updated_like_num;
 	}
 	
 	function insert_new_food_records($arrays)
