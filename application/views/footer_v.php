@@ -23,8 +23,8 @@
 				ass("active");
 			}
 			
-			$("#grid_thumb").hover(function(){
-				this.children("#btn-bar").toggleClass('hidden_btn');
+			$(".thumb").hover(function(){
+				$(this).children("#btn-bar").toggleClass('hidden_btn');
 				//$('.btn-toolbar').toggleClass('hidden_btn');
 			});
 			
