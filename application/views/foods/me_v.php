@@ -1,3 +1,6 @@
+<?php
+	$ses_user=$this->session->userdata('User');
+?>
 <div id="me_page" class="mainWrapper">
 	<div id="me_container">
 		<div id="me_title">
@@ -19,7 +22,7 @@
 			<div>
 				<?php echo $ses_user['link']; ?>
 			</div>
-			v
+			
 		</div><!--#me_body-->
 	</div><!-- #me_container -->
 </div><!-- #me_page -->
