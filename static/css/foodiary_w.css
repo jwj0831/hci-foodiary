@@ -204,6 +204,34 @@
  */
 
 
+#upload_container{
+	background-color: #fff;
+	-webkit-box-shadow: 0px 0px 20px 1px #ccc;
+	-moz-box-shadow: 0px 0px 20px 1px #ccc;
+	box-shadow: 0px 0px 20px 1px #ccc;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	z-index: 1;
+}
+
+#upload_title {
+	font-size: 20px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+#upload_img {
+	display: none;
+	margin: 5px;
+}
+
+#food_img {
+	
+}
+
+
 
 /* Extra small devices (phones, less than 768px) */
 /* No media query since this is the default in Bootstrap */
@@ -228,35 +256,13 @@
 
 
 
-#upload_container{
-	background-color: #fff;
-	-webkit-box-shadow: 0px 0px 20px 1px #ccc;
-	-moz-box-shadow: 0px 0px 20px 1px #ccc;
-	box-shadow: 0px 0px 20px 1px #ccc;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	z-index: 1;
-}
-
-#upload_title {
-	font-size: 20px;
-	text-align: center;
-	padding-top: 10px;
-	padding-bottom: 10px;
-}
 
 #upload_body {
 
 }
 
-#food_img_thumb {
-	border: 0px;
-}
 
-#img-thumb-area {
-	display: none;
-}
+
 
 #fileUpload {
   /* Note: display:none on the input won't trigger the click event in WebKit.

@@ -8,8 +8,8 @@
 	$attr = array( 'role' => 'form', 'id' => 'upload_action','method' => 'post' );
  	echo form_open_multipart('/new_food/upload', $attr);
 ?>
-			<div class="thumbnail" id="food_img_thumb">
-                <img class="img-rounded" id="img-thumb-area" src="" alt="food_pic" />
+			<div id="upload_img">
+                <img class="img-rounded" id="food_img" src="" alt="food_pic" />
 			</div>
 			<div class="form-group" id="food_name_input">
 				<input type="text" class="form-control" id="input_name" name="food_name" value="<?php echo set_value('food_name'); ?>" placeholder="Input Food's name">
@@ -27,10 +27,9 @@
 				        var imageReader = new FileReader();
 				        imageReader.readAsDataURL(document.getElementById("fileUpload").files[0]);
 				        imageReader.onload = function (oFREvent) {
-				            document.getElementById("img-thumb-area").src = oFREvent.target.result;
-				            document.getElementById("img-thumb-area").style.width = "400px";
-							document.getElementById("img-thumb-area").style.height = "250px";
-							document.getElementById("img-thumb-area").style.display = "block";
+				            document.getElementById("food_img").src = oFREvent.target.result;
+				            document.getElementById("food_img").style.width = "100%";
+							document.getElementById("upload_img").style.display = "block";
 				        };
 				        
 				    };
