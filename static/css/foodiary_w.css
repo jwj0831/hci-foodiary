@@ -66,6 +66,13 @@
     -moz-border-radius: 10px 10px 0px 0px;
     border-radius: 10px 10px 0px 0px;
 }
+#btn-bar {
+	position: absolute;
+	top: 8px;
+	left: 8px;
+	visibility: hidden;
+	z-index: 101;	
+}
 
 #user_info_area {
 	border-bottom: 1px solid #ddd;

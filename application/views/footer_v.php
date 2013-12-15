@@ -21,7 +21,11 @@
 				$("#new_menu").removeClass("active");
 				$("#me_menu").addClass("active");
 			}
-		
+			
+			$('#btn-bar').hover(function(){
+				$('.btn-bar').toggleClass('hidden');
+			});
+			
 			$('#facebook').click(function(e) {
 		    	FB.login(function(response) {
 			  		if(response.authResponse) {

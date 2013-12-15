@@ -17,6 +17,17 @@ foreach ($list as $lt)
 ?>
 			<div class="item  col-xs-4 col-lg-4">
 	        	<div class="thumb" id="grid_thumb">
+	        		<div id="btn-bar" class="btn-toolbar hidden">
+					  	<div class="btn-group">
+					  		<a href="#" class="btn btn-inverse disabled"><i class="icon-white icon-thumbs-up"></i></a>
+					  		<a href="#" class="btn btn-inverse disabled"><i class="icon-white icon-heart"></i></a>
+					  		<a href="#" class="btn btn-inverse disabled"><i class="icon-white icon-share-alt"></i></a>
+					  	</div>
+					  	<div class="btn-group">
+					  		<a href="#" class="btn btn-inverse disabled"><i class="icon-white icon-trash"></i></a>
+					  	</div>
+					</div>
+	        		
 	            	<a href="<?php echo '/hci-foodiary/foods/record/'.$lt->id ?>" class="food_record_link">
 	                	<img id="food_img" class="img-rounded" src="<?php echo $thumb_img; ?>" alt="" />
 	               	</a>
