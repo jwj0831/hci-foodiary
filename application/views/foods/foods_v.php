@@ -29,12 +29,12 @@ foreach ($list as $lt)
 		               			</label>
 		               			
 		               		</div>
-		               		<label class="col-md-5">
-		               			liked <?php echo $lt->like_num; ?> peoples
+		               		<label id="like_label" class="col-md-5">
+		               			liked <span class="badge"><?php echo $lt->like_num; ?></span> peoples
 		               		</label>
 		               	</div>
 	               	</div>
-	                <div class="caption">
+	                <div id="food_info_area" class="caption">
 	                    <div class="row">
 	                        <div class="col-md-7">
 	                        	<?php 
@@ -48,7 +48,8 @@ foreach ($list as $lt)
 									$food_name = $lt->food_name;
 								}
 	                        	?>
-	                            <label class="food_names"><?php echo $food_name; ?></label>
+	                        	<span class="label label-primary">Food Name</span>
+	                            <label class="food_names"> <?php echo $food_name; ?></label>
 	                        </div>
 	                        <div class="col-md-5">
 	                        	<div id="rating bar" class="pull-right">
