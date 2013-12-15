@@ -23,7 +23,8 @@
 			}
 			
 			$('.item').hover(function(){
-				$('.btn-toolbar').toggleClass('hidden');
+				this.children().children().toggleClass('hidden_btn');
+				//$('.btn-toolbar').toggleClass('hidden_btn');
 			});
 			
 			$('#facebook').click(function(e) {

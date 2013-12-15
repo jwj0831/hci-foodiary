@@ -16,14 +16,14 @@ if(empty($ses_user)) {
 				<div class="row mg-btm">
 	             	<div class="col-md-12">
 		                <a id="facebook" class="btn btn-primary btn-block">
-		                  <i class="icon-facebook"></i>    Login with Facebook
+		                  <i class="fa fa-facebook"></i>    Login with Facebook
 		                </a>
 					</div>
 				</div>
 				<div class="row">
 					<div class="col-md-12">
 		                <a href="#" class="btn btn-info btn-block" >
-		                  <i class="icon-twitter"></i>    Login with Twitter
+		                  <i class="fa fa-twitter"></i>    Login with Twitter
 		                </a>
 		            </div>
 	          	</div>
