@@ -27,13 +27,16 @@
 		margin-top: 4px;
 		margin-bottom: 0px;
 		margin-right: 0px;
-		padding-left: 0px;
+		padding-left: 10px;
 		text-decoration: none;
 	}
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+	#me_btn {
+		padding-bottom: 0px;
+	}
 	
 }
 
