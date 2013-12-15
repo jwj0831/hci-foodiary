@@ -93,10 +93,11 @@
 /*
  * Upload Area
  */
-#upload_container{
-	min-height: 400px;
-	background-color: #fff;
-	margin: 80px 0px 0px 0px;
+#upload_page {
+	width: 460px;
+	margin: auto;
+	height: 100%;
+	min-height: 600px;
 	-webkit-box-shadow: 0px 0px 20px 1px #ccc;
 	-moz-box-shadow: 0px 0px 20px 1px #ccc;
 	box-shadow: 0px 0px 20px 1px #ccc;
@@ -106,14 +107,10 @@
 	z-index: 1;
 }
 
-.upload_area {
-
-}
-
-#upload_page {
-	width: 460px;
-	margin: auto;
-	height: 100%;
+#upload_container{
+	min-height: 400px;
+	background-color: #fff;
+	margin-top: 80px;
 }
 
 #upload_title {
@@ -122,6 +119,13 @@
 	padding-top: 10px;
 	padding-bottom: 10px;
 }
+
+#upload_body {
+
+}
+
+
+
 
 #food_img_thumb {
 	border: 0px;
