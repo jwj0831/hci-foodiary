@@ -13,11 +13,6 @@
 			var pathArray = window.location.pathname.split( '/' );
 			var currentPage = pathArray[2];
 			
-			
-			//Food Page's Map width
-			$(".panel")
-			
-			
 			if(currentPage == "new_food") {
 				$("#new_menu").addClass("active");
 				$("#me_menu").removeClass("active");
@@ -34,11 +29,48 @@
 				$("#new_menu").removeClass("active");
 				$("#me_menu").addClass("active");
 			}
+			else if(currentPage == "") {
+				// toolbar 
+				$(".thumbnail").hover(function(){
+					$(this).children(".btn-toolbar").toggleClass('hidden_btn');
+				});
+				
+				$(".thumbs_btn").click(function(){
+					var currentObj = $(this);
+					var valArrays = currentObj.val().split("&");
+					var myData = {'food_id' : valArrays[0], 'user_name': valArrays[1]};
+					var myDataString = JSON.stringify(myData);
+					var cookie = getCookie('csrf_cookie_name');
+					alert(myDataString);
+					$.ajax({
+						type: 'post',
+						url: '/hci-foodiary/ajaxFood/likeFood',
+						data: {'data': myDataString, 'csrf_test_name':cookie},
+						ContentType: "application/json",
+						error:function(xhr, ajaxOptions, thrownError) {//any errors?
+							alert(thrownError);//alert with HTTP error
+							//$('.animation_image').hide();//hide loading image
+							loading = false;
+						},
+						success:function(result){
+							//console.log(result);
+							if(result == "") {
+								alert("You already checked");
+							}
+							else {
+								var rootObj = currentObj.parent(".btn-group").parent(".btn-toolbar").parent(".thumbnail");
+								rootObj.children(".user_info_area").children(".row").children(".like_div").children(".like_label").children(".like_num").html(result);
+							}
+						}
+					});
+					
+				});
+
+				
+			}
 			
-			$(".thumb").hover(function(){
-				$(this).children(".btn-toolbar").toggleClass('hidden_btn');
-				//$('.btn-toolbar').toggleClass('hidden_btn');
-			});
+			
+			
 			
 			$('#facebook').click(function(e) {
 		    	FB.login(function(response) {
@@ -53,36 +85,7 @@
 			});
 			
 			//Clcik Like Button
-			$(".thumbs_btn").click(function(){
-				var currentObj = $(this);
-				var valArrays = currentObj.val().split("&");
-				var myData = {'food_id' : valArrays[0], 'user_name': valArrays[1]};
-				var myDataString = JSON.stringify(myData);
-				var cookie = getCookie('csrf_cookie_name');
-				alert(myDataString);
-				$.ajax({
-					type: 'post',
-					url: '/hci-foodiary/ajaxFood/likeFood',
-					data: {'data': myDataString, 'csrf_test_name':cookie},
-					ContentType: "application/json",
-					error:function(xhr, ajaxOptions, thrownError) {//any errors?
-						alert(thrownError);//alert with HTTP error
-						//$('.animation_image').hide();//hide loading image
-						loading = false;
-					},
-					success:function(result){
-						//console.log(result);
-						if(result == "") {
-							alert("You already checked");
-						}
-						else {
-							var rootObj = currentObj.parent(".btn-group").parent(".btn-toolbar").parent(".thumb");
-							rootObj.children(".user_info_area").children(".row").children(".like_label").children(".like_num").html(result);
-						}
-					}
-				});
-				
-			});
+			
 			
 	    	$(document).ready(function() {
 				// input rating value

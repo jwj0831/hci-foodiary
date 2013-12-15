@@ -16,7 +16,7 @@ foreach ($list as $lt)
 	}
 ?>
 			<div class="item col-md-4">
-	        	<div class="thumb" id="grid_thumb">
+	        	<div class="thumbnail">
 	        		<div class="btn-toolbar hidden_btn">
 					  	<div class="btn-group">
 					  		<button type="button" value="<?php echo $lt->id."&".$lt->user_name; ?>" class="btn btn-default thumbs_btn" role="button"><i class="fa fa-thumbs-up"></i></button>
