@@ -32,9 +32,7 @@
 			else if(currentPage == "") {
 				// toolbar 
 				
-				$(".thumbnail").hover( function(){
-					$(this).children(".btn-toolbar").toggleClass('hidden_btn');
-				});
+				
 				
 				$(".thumbs_btn").click(function(){
 					var currentObj = $(this);
@@ -84,6 +82,11 @@
 			
 			
 	    	$(document).ready(function() {
+	    		
+	    		$(".thumbnail").hover( function(){
+					$(".thumbnail").children(".btn-toolbar").toggleClass('hidden_btn');
+				});
+	    		
 				// input rating value
 				$('.starrr').on('starrr:change', function(e, value){
 				  //alert('new rating is ' + value);
