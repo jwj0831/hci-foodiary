@@ -35,12 +35,15 @@ class Foods extends CI_Controller {
 		$ses_user = $this->session->userdata('User');
 		$data['liked'] = $this->foodiary_m->get_my_liked_records('like_records', $offset, $num_of_records, $ses_user['name']);
 			
+		$this->load->view('foods/foods_v', $data);
+			/*
 		if (BROWSER_TYPE == 'W'){
 			$this->load->view('foods/foods_v', $data);
 		}
 		else if (BROWSER_TYPE == 'M'){
 			$this->load->view('mobile/foods/m_foods_v', $data);
 		}	
+			 * */
 	}
 	
 	

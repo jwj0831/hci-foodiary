@@ -15,7 +15,7 @@ foreach ($list as $lt)
 		$thumb_img = '/hci-foodiary/uploads/'.$lt->file_name;
 	}
 ?>
-			<div class="item  col-xs-4 col-lg-4">
+			<div class="item col-md-4">
 	        	<div class="thumb" id="grid_thumb">
 	        		<div class="btn-toolbar hidden_btn">
 					  	<div class="btn-group">
