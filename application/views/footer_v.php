@@ -14,11 +14,11 @@
 			var currentPage = pathArray[2];
 			
 			if(currentPage == "new_food") {
-				$("#mew_menu").addClass("active");
+				$("#new_menu").addClass("active");
 				$("#me_menu").removeClass("active");
 			}
 			else if(currentPage == "me") {
-				$("#mew_menu").removeClass("active");
+				$("#new_menu").removeClass("active");
 				$("#me_menu").addClass("active");
 			}
 		
