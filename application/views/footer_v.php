@@ -23,7 +23,7 @@
 			}
 			
 			$('#btn-bar').hover(function(){
-				$('.btn-bar').toggleClass('hidden');
+				$('#btn-bar').toggleClass('hidden');
 			});
 			
 			$('#facebook').click(function(e) {
