@@ -23,6 +23,7 @@
 	}
 	
 	#me_btn {
+		border: 0px;
 		margin-top: 12px;
 		text-decoration: none;
 	}
