@@ -2,21 +2,13 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="description" content="">
-		<meta name="author" content="">
-		<link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
-
 		<title>Welcome to Foodiary</title>
 	
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.1/css/bootstrap.min.css">
 		<link rel="stylesheet" href="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.css" />
-		
 		
 		<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 		<script src="http://code.jquery.com/mobile/1.3.2/jquery.mobile-1.3.2.min.js"></script>
-		<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.1/js/bootstrap.min.js"></script>
 		<script src="/hci-foodiary/static/scripts/jquery.starrr.js" type="text/javascript"></script>
 		<!-- Font Awesome's CDN -->
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
