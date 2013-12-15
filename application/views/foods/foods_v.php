@@ -28,7 +28,7 @@ foreach ($list as $lt)
 					</div>
 	        		
 	            	<a href="<?php echo '/hci-foodiary/foods/record/'.$lt->id ?>" class="food_record_link">
-	                	<img id="food_img" class="img-rounded" src="<?php echo $thumb_img; ?>" alt="" />
+	                	<img class="food_img img-rounded" src="<?php echo $thumb_img; ?>" alt="" />
 	               	</a>
 	               	<div class="caption user_info_area">
 	               		<div class="row">

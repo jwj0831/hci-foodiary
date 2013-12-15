@@ -48,7 +48,7 @@
 		z-index: 1;
 	}
 	
-	#food_img {
+	.food_img {
 		width: 100%;
 		-webkit-border-radius: 10px 10px 0px 0px;
 	    -moz-border-radius: 10px 10px 0px 0px;
@@ -86,7 +86,7 @@
 		z-index: 1;
 	}
 	
-	#food_img {
+	.food_img {
 		width: 100%;
 		height: 250px;
 		-webkit-border-radius: 10px 10px 0px 0px;
@@ -228,7 +228,9 @@
 }
 
 #food_img {
-	
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 
 
@@ -250,7 +252,7 @@
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
 	#upload_container {
-		margin: 20% 20%;
+		margin: 8% 35%;
 	}
 }
 
