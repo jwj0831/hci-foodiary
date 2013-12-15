@@ -39,6 +39,16 @@ footer div {
 #logged_info {
 	text-align: right;
 }
+
+#user_profile_link {
+	color: #777;
+}
+
+#user_profile_link:hover {
+	color: #428bca;
+	text-decoration: none;
+}
+
 #user_login_thumb {
 	width: 30px;
 	-webkit-border-radius: 5px;

@@ -48,9 +48,11 @@
 							<li id="new_menu">
 								<a href="/hci-foodiary/new_food"><i class="fa fa-plus"></i> New</a>
 							</li>
+							<!--
 							<li id="me_menu">
 								<a href="/hci-foodiary/me"><i class="fa fa-user"></i> Me</a>
 							</li>
+							-->
 						</ul>
 						
 <?php
@@ -58,7 +60,9 @@
 		$ses_user=$this->session->userdata('User');
 ?>
 					<div id="logged_info" class="login_out_info col-md-3 pull-right">
-							<img id="user_login_thumb" src="https://graph.facebook.com/<?php echo $ses_user['id']; ?>/picture" /> <label id="user_name"><?php echo $ses_user['name']; ?></label>	
+							<a href="/hci-foodiary/me" id="user_profile_link">
+								<img id="user_login_thumb" src="https://graph.facebook.com/<?php echo $ses_user['id']; ?>/picture" /> <label id="user_name"><?php echo $ses_user['name']; ?></label>	
+							</a>
 							<a href="<?php echo $this->session->userdata('logout'); ?>" id="logout_btn"  class="btn btn-default" role="button">Log Out</a>
 					</div>
 <?php 
