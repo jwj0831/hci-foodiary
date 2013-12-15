@@ -30,7 +30,7 @@ class Me extends CI_Controller {
 		if (BROWSER_TYPE == 'W'){
 			
 			$ses_user = $this->session->userdata('User');
-			$liked = $this->foodiary_m->get_like_food_num_about_user($ses_user['name'], $food_id);
+			$liked = $this->foodiary_m->get_like_food_num_about_user($ses_user['name']);
 			$records = $this->foodiary_m->get_food_records_num_about_user($ses_user['name']);
 			$data = array('liked'=> $liked, 'records' => $records);
 			$this->load->view('foods/me_v', $data);
