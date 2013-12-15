@@ -55,7 +55,7 @@
 	-moz-box-shadow: 0px 0px 20px 1px #ccc;
 	box-shadow: 0px 0px 20px 1px #ccc;
 }
-
+/*
 .item.list-group-item
 {
     float: none;
@@ -90,11 +90,12 @@
     display: table;
     content: " ";
 }
+*/
 
-.thumbnail {
+.thumb {
 	border: 0px;
 }
-.thumbnail a #food_img{
+.thumb a #food_img{
 	width: 365px;
 	height: 250px;
 	-webkit-border-radius: 10px 10px 0px 0px;
@@ -102,6 +103,7 @@
     border-radius: 10px 10px 0px 0px;
 }
 
+/*
 .item.list-group-item img
 {
     float: left;
@@ -114,6 +116,7 @@
 {
     margin: 0 0 11px;
 }
+*/
 
 #user_info_area {
 	border-bottom: 1px solid #ddd;
