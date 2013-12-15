@@ -183,7 +183,7 @@
  * 
  */
 #food_page {
-	width: 600px;
+	width: 800px;
 	margin: auto;
 	height: 100%;
 }
@@ -208,7 +208,18 @@
 	padding-bottom: 10px;
 }
 
+#food_body {
+	
+}
 
+#food-record-img-thumb {
+	width: 365px;
+	height: 250px;
+}
+
+#food_record_info {
+	font-size: 18px;
+}
 /*
  * me
  */
