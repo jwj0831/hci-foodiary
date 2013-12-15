@@ -29,12 +29,7 @@ class New_food extends CI_Controller {
 	public function index()
 	{
 		if( @$this->session->userdata('logged_in') == TRUE ) {
-			if (BROWSER_TYPE == 'W'){
-				$this->load->view('foods/upload_v');
-			}
-			else if (BROWSER_TYPE == 'M'){
-				$this->load->view('mobile/foods/m_upload_v');
-			}	
+			$this->load->view('foods/upload_v');
 		} // session if block
 		else{
 			alert('Please login to upload', '/hci-foodiary');
@@ -44,26 +39,14 @@ class New_food extends CI_Controller {
 	
 	public function _remap($method)
 	{
-		if (BROWSER_TYPE == 'W'){
-			$this->load->view('header_v');
-		
-			if( method_exists($this, $method) )
-			{
-				$this->{"{$method}"}();
-			}
-			
-			$this->load->view('footer_v');
+		$this->load->view('header_v');
+	
+		if( method_exists($this, $method) )
+		{
+			$this->{"{$method}"}();
 		}
-		else if (BROWSER_TYPE == 'M') {
-			$this->load->view('mobile/m_header_v');
 		
-			if( method_exists($this, $method) )
-			{
-				$this->{"{$method}"}();
-			}
-			
-			$this->load->view('mobile/m_footer_v');
-		}
+		$this->load->view('footer_v');
 	}
 	
 	public function upload()

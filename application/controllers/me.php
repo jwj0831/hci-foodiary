@@ -27,43 +27,24 @@ class Me extends CI_Controller {
 	
 	public function index()
 	{
-		if (BROWSER_TYPE == 'W'){
-			
 			$ses_user = $this->session->userdata('User');
 			$liked = $this->foodiary_m->get_like_food_num_about_user($ses_user['name']);
 			$records = $this->foodiary_m->get_food_records_num_about_user($ses_user['name']);
 			$data = array('liked'=> $liked, 'records' => $records);
 			$this->load->view('foods/me_v', $data);
-		}
-		else if (BROWSER_TYPE == 'M'){
-			$this->load->view('mobile/foods/m_me_v');
-		}	
 	}
 	
 	
 	public function _remap($method)
 	{
-		if (BROWSER_TYPE == 'W'){
-			$this->load->view('header_v');
-		
-			if( method_exists($this, $method) )
-			{
-				$this->{"{$method}"}();
-			}
-			
-			$this->load->view('footer_v');
-		}
-		else if (BROWSER_TYPE == 'M') {
-			$this->load->view('mobile/m_header_v');
-		
-			if( method_exists($this, $method) )
-			{
-				$this->{"{$method}"}();
-			}
-			
-			$this->load->view('mobile/m_footer_v');
+		$this->load->view('header_v');
+	
+		if( method_exists($this, $method) )
+		{
+			$this->{"{$method}"}();
 		}
 		
+		$this->load->view('footer_v');
 	}
 	
 	public function me()
