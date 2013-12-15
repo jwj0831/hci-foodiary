@@ -101,7 +101,6 @@ class AjaxFood extends CI_Controller {
 	                		<div class="caption food_info_area">
 	                    		<div class="row">
 	                        		<div class="col-md-6 col-xs-6">';
-									
 			if (mb_strlen($lt->food_name, "utf-8") > 14 )
         	{
         		$food_name = mb_substr($lt->food_name, 0, 14, "utf-8");

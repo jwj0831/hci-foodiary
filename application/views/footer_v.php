@@ -65,12 +65,7 @@
 					});
 					
 				});
-
-				
 			}
-			
-			
-			
 			
 			$('#facebook').click(function(e) {
 		    	FB.login(function(response) {
@@ -132,7 +127,7 @@
 								},
 								success:function(result){
 									console.log(result);
-									$("#foods").append(result);
+									$("#foods").innerHTML = result;
 									loading = false;
 									offset = offset + 9;
 								}
