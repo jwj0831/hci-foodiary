@@ -21,15 +21,32 @@
 			</div>
 			<div class="col-md-6" id="food_record_info">
 				<div class="form-group" id="user_name">
-					<span class="label label-default"><i class="fa fa-user"></i> User</span> <?php echo $food->user_name; ?>
+					<span class="label label-default glyphicon glyphicon-user"> User</span> <?php echo $food->user_name; ?>
 				</div>
 				<div class="form-group" id="reg_date">
-					<span class="label label-default"><i class="fa fa-calendar-o"></i> Date</span> <?php echo $food->reg_date; ?>
+					<span class="label label-default glyphicon glyphicon-calendar"> Date</span> <?php echo $food->reg_date; ?>
 				</div>
 				<div class="form-group" id="food_name">
-					<span class="label label-default"><img src="../../../static/images/food.png"></i> Food</span> <?php echo $food->food_name; ?>
+					<span class="label label-default glyphicon glyphicon-cutlery"> Food</span> <?php echo $food->food_name; ?>
 				</div>
-				<div class="form-group" id="food_comments">
+				<div class="form-group" id="ratings">
+      				<span class="label label-default glyphicon glyphicon-star-empty"> Rate</span>
+      				<div id="rate-bar">
+      					<?php
+$i=0;
+for($i=0; $i <$food->ratings; $i++)
+{
+	echo '<span class="glyphicon glyphicon-star"></span>';
+}
+for(; $i < 5; $i++)
+{
+	echo '<span class="glyphicon glyphicon-star-empty"></span>';
+}
+
+?>
+					</div>
+      			</div>
+				<div class="well well-sm" id="food_comments">
 					<?php echo $food->comments; ?>
 				</div>
 			</div>
@@ -58,20 +75,8 @@
   } 
  </script> 
 			<div id="map_canvas"style="width:500px; height:300px;"></div> 
-			<div id="rating bar" class="pull-right">
-<?php
-$i=0;
-for($i=0; $i <$food->ratings; $i++)
-{
-	echo '<span class="glyphicon glyphicon-star"></span>';
-}
-for(; $i < 5; $i++)
-{
-	echo '<span class="glyphicon glyphicon-star-empty"></span>';
-}
+			
 
-?>
-			</div>
 		</div><!-- .-->
 	</div><!-- #container -->
 </div><!-- #mainWrapper -->

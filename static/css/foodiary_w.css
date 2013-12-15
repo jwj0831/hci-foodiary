@@ -204,7 +204,7 @@
 #food_title {
 	font-size: 20px;
 	text-align: center;
-	padding-top: 10px;
+	padding-top: 0px;
 	padding-bottom: 10px;
 }
 
@@ -220,6 +220,14 @@
 #food_record_info {
 	font-size: 18px;
 }
+#rate-bar {
+	display: inline;
+}
+#food_comments {
+	height: 90px;
+	font-size: 16px;
+}
+
 /*
  * me
  */
