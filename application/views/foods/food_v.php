@@ -56,7 +56,7 @@ for(; $i < 5; $i++)
 				<div class="panel panel-default">
 					<div class="panel-heading" id="map_panel_heading">Map</div>
 					<div class="panel-body" id="map_panel_body">
-				    	<div id="map_canvas"style="width:779px; height:240px;"></div> 
+				    	<div id="map_canvas"></div> 
 				  	</div>
 				</div>			
 			</div>

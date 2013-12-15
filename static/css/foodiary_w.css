@@ -4,28 +4,77 @@
  * Web page CSS 
  */
 
-/* Nav Bar Width*/
-
 
 /*
- * main grid page part
+ * Foods page
  */
 
+.item {
+    margin: 10px 0px;
+}
+
+.thumb {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: 0px 0px 20px 1px #ccc;
+	-moz-box-shadow: 0px 0px 20px 1px #ccc;
+	box-shadow: 0px 0px 20px 1px #ccc;
+}
+
+.btn-toolbar {
+	position: absolute;
+	top: 8px;
+	left: 24px;
+	z-index: 1;	
+}
+
+.like_div {
+	text-align: right;
+	padding-right: 20px;
+}
+
+.like_label {
+		margin-top: 5px;
+}
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
 @media (max-width: 767px){
 	#foods_container {
-		margin-top: 5%;
+		margin-top: 20%;
 		margin-left: 15px;
 		margin-right: 15px;
 		z-index: 1;
 	}
+	
+	#food_img {
+		width: 100%;
+		-webkit-border-radius: 10px 10px 0px 0px;
+	    -moz-border-radius: 10px 10px 0px 0px;
+	    border-radius: 10px 10px 0px 0px;
+	}
+	
+	.user_info_area {
+		border-bottom: 1px solid #ddd;
+		padding: 10px 5px;
+	}
+	
+	.user_thumb {
+		width: 30px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+	
+	.food_info_area {
+		padding: 10px 5px;
+	}
 }
+
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-	#foods_container {
-		min-height: 600px;
-		margin: 80px 0px 0px 0px;
-		z-index: 1;
-	}
+	
 }
 
 /* Medium devices (desktops, 992px and up) */
@@ -38,66 +87,123 @@
 	}
 	
 	#food_img {
+		width: 100%;
 		height: 250px;
+		-webkit-border-radius: 10px 10px 0px 0px;
+	    -moz-border-radius: 10px 10px 0px 0px;
+	    border-radius: 10px 10px 0px 0px;
+	}
+	
+	.user_info_area {
+		border-bottom: 1px solid #ddd;
+		padding: 10px 5px;
+	}
+	
+	.user_thumb {
+		width: 30px;
+		-webkit-border-radius: 5px;
+		-moz-border-radius: 5px;
+		border-radius: 5px;
+	}
+	
+	.like_label {
+		text-align: right;
+	}
+	
+	.food_info_area {
+		padding: 10px 5px;
+	}
+}
+
+
+/*
+ * Food Page
+ */
+
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media (max-width: 767px){
+	#food_page {
+		width: 100%;
+		margin: 15% 5px;
+		height: 100%;
+	}
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+	#food_page {
+		width: 800px;
+		margin: auto;
+		height: 100%;
 	}
 }
 
 
 
 
-
-
-#main_grid {
-	margin-top: 10px;
-}
-
-.glyphicon { margin-right:5px; }
-
-.thumb {
-	border: 0px;
-    margin-bottom: 20px;
-    padding: 0px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    border-radius: 10px;
-    -webkit-box-shadow: 0px 0px 20px 1px #ccc;
+#food_container {
+	min-height: 400px;
+	background-color: #fff;
+	margin: 80px 0px 0px 0px;
+	-webkit-box-shadow: 0px 0px 20px 1px #ccc;
 	-moz-box-shadow: 0px 0px 20px 1px #ccc;
 	box-shadow: 0px 0px 20px 1px #ccc;
-}
-.thumb a #food_img{
-	width: 100%;
-	/*height: 250px; 8?
-	-webkit-border-radius: 10px 10px 0px 0px;
-    -moz-border-radius: 10px 10px 0px 0px;
-    border-radius: 10px 10px 0px 0px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	z-index: 1;
 }
 
-.btn-toolbar {
-	position: absolute;
-	top: 8px;
-	left: 24px;
-	z-index: 1;	
+#food_title {
+	font-size: 20px;
+	text-align: center;
+	padding-top: 0px;
+	padding-bottom: 10px;
 }
 
-.user_info_area {
-	border-bottom: 1px solid #ddd;
-	padding: 10px 5px;
+#food_body {
+	
 }
 
-.user_thumb {
-	width: 30px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	border-radius: 5px;
+.food_info_row{
+	margin: 0px;
+	padding: 10px;
 }
 
-.like_label {
-	text-align: right;
+#food-record-img-thumb {
+	width: 365px;
+	height: 250px;
 }
 
-.food_info_area {
-	padding: 10px 5px;
+#food_record_info {
+	font-size: 18px;
 }
+#rate-bar {
+	display: inline;
+}
+#food_comments {
+	height: 90px;
+	font-size: 16px;
+}
+
+#map_panel_heading {
+	text-align: center;
+}
+
+#map_panel_body {
+	padding: 0px;
+}
+
+
+
 
 /*
  * Upload Area
@@ -188,67 +294,6 @@
 	font-size: 40px;
 }
 
-/*
- * 
- */
-#food_page {
-	width: 800px;
-	margin: auto;
-	height: 100%;
-}
-
-#food_container {
-	min-height: 400px;
-	background-color: #fff;
-	margin: 80px 0px 0px 0px;
-	-webkit-box-shadow: 0px 0px 20px 1px #ccc;
-	-moz-box-shadow: 0px 0px 20px 1px #ccc;
-	box-shadow: 0px 0px 20px 1px #ccc;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-	z-index: 1;
-}
-
-#food_title {
-	font-size: 20px;
-	text-align: center;
-	padding-top: 0px;
-	padding-bottom: 10px;
-}
-
-#food_body {
-	
-}
-
-.food_info_row{
-	margin: 0px;
-	padding: 10px;
-}
-
-#food-record-img-thumb {
-	width: 365px;
-	height: 250px;
-}
-
-#food_record_info {
-	font-size: 18px;
-}
-#rate-bar {
-	display: inline;
-}
-#food_comments {
-	height: 90px;
-	font-size: 16px;
-}
-
-#map_panel_heading {
-	text-align: center;
-}
-
-#map_panel_body {
-	padding: 0px;
-}
 
 
 /*
@@ -373,4 +418,20 @@
 }
 .mg-btm{
 	margin-bottom:20px;
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media (max-width: 767px){
+
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
 }

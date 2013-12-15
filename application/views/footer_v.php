@@ -13,9 +13,22 @@
 			var pathArray = window.location.pathname.split( '/' );
 			var currentPage = pathArray[2];
 			
+			
+			//Food Page's Map width
+			$(".panel")
+			
+			
 			if(currentPage == "new_food") {
 				$("#new_menu").addClass("active");
 				$("#me_menu").removeClass("active");
+			}
+			else if(currentPage == "foods") {
+				$("#new_menu").removeClass("active");
+				$("#me_menu").addClass("active");
+				
+				var widthVal = $(".panel").width();
+				$("#map_canvas").width(widthVal).height(200);
+				
 			}
 			else if(currentPage == "me") {
 				$("#new_menu").removeClass("active");

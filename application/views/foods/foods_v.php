@@ -32,21 +32,21 @@ foreach ($list as $lt)
 	               	</a>
 	               	<div class="caption user_info_area">
 	               		<div class="row">
-		               		<div class="col-md-7">
+		               		<div class="col-md-6 col-xs-6">
 		               			<img src="<?php echo $lt->user_img; ?>" alt="user_img" class="user_thumb" />
 		               			<label for="" class="user_name">
 		               				<?php echo $lt->user_name; ?>
 		               			</label>
 		               			
 		               		</div>
-		               		<label class="col-md-5 like_label">
-		               			liked <span class="badge like_num"><?php echo $lt->like_num; ?></span> peoples
-		               		</label>
+		               		<div class="col-md-6 col-xs-6 like_div">
+		               			<label class="like_label"><span class="badge like_num"><?php echo $lt->like_num; ?></span> likes</label>
+		               		</div>
 		               	</div>
 	               	</div>
 	                <div class="caption food_info_area">
 	                    <div class="row">
-	                        <div class="col-md-7">
+	                        <div class="col-md-6 col-xs-6">
 	                        	<?php 
 	                        	if (mb_strlen($lt->food_name, "utf-8") > 14 )
 	                        	{
@@ -58,10 +58,10 @@ foreach ($list as $lt)
 									$food_name = $lt->food_name;
 								}
 	                        	?>
-	                        	<span class="label label-primary">Food Name</span>
+	                        	<span class="label label-primary">Name</span>
 	                            <label class="food_names"> <?php echo $food_name; ?></label>
 	                        </div>
-	                        <div class="col-md-5">
+	                        <div class="col-md-6 col-xs-6">
 	                        	<div id="rating bar" class="pull-right">
 <?php
 $i=0;
