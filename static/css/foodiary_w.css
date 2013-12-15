@@ -91,6 +91,9 @@
     content: " ";
 }
 
+.thumbnail {
+	border: 0px;
+}
 .thumbnail a #food_img{
 	width: 365px;
 	height: 250px;
@@ -110,6 +113,17 @@
 .list-group-item-text
 {
     margin: 0 0 11px;
+}
+
+#user_info_area {
+	border-bottom: 1px solid #ddd;
+}
+
+#user_thumb {
+	width: 30px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
 }
 
 
