@@ -42,7 +42,7 @@
 		$ses_user=$this->session->userdata('User');
 ?>	
 
-						<a href="/hci-foodiary/me">
+						<a href="/hci-foodiary/me" id="me_btn" class="pull-right">
 							<img id="user_login_thumb" src="https://graph.facebook.com/<?php echo $ses_user['id']; ?>/picture" /> <label id="user_name"><?php echo $ses_user['name']; ?></label>
 						</a>
 <?php 

@@ -21,6 +21,11 @@
 	#new_btn, #login_btn {
 		width: 50px;
 	}
+	
+	#me_btn {
+		margin-top: 12px;
+		text-decoration: none;
+	}
 }
 
 /* Small devices (tablets, 768px and up) */
