@@ -44,8 +44,8 @@
 
 .glyphicon { margin-right:5px; }
 
-#grid_thumb
-{
+.thumb {
+	border: 0px;
     margin-bottom: 20px;
     padding: 0px;
     -webkit-border-radius: 10px;
@@ -55,10 +55,6 @@
 	-moz-box-shadow: 0px 0px 20px 1px #ccc;
 	box-shadow: 0px 0px 20px 1px #ccc;
 }
-
-.thumb {
-	border: 0px;
-}
 .thumb a #food_img{
 	width: 367px;
 	height: 250px;
@@ -66,11 +62,12 @@
     -moz-border-radius: 10px 10px 0px 0px;
     border-radius: 10px 10px 0px 0px;
 }
-#btn-bar {
+
+.btn-toolbar {
 	position: absolute;
 	top: 8px;
-	left: 8px;
-	z-index: 101;	
+	left: 24px;
+	z-index: 1;	
 }
 
 #user_info_area {

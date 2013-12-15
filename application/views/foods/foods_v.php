@@ -17,7 +17,7 @@ foreach ($list as $lt)
 ?>
 			<div class="item  col-xs-4 col-lg-4">
 	        	<div class="thumb" id="grid_thumb">
-	        		<div id="btn-bar" class="btn-toolbar hidden_btn">
+	        		<div class="btn-toolbar hidden_btn">
 					  	<div class="btn-group">
 					  		<a href="#" id="thumbs_btn"  class="btn btn-default" role="button"><i class="fa fa-thumbs-up"></i></a>
 					  		<a href="#" class="btn btn-default"><i class="fa fa-share-square"></i></a>
