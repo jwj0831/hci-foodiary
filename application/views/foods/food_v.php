@@ -4,6 +4,7 @@
 			<div>Your Food Records</div>
 		</div>
 		<div id="food_body">
+			<div class="row">
 <?php
 	$file_info = explode(".", $food->file_name);
 	if(is_file('./uploads/'.$file_info[0]."_thumb.".$file_info[1]))
@@ -16,22 +17,22 @@
 	}
 
 ?>
-			<div class="thumbnail col-md-6" id="food_img_thumb">
-                <img class="img-rounded" id="food-record-img-thumb" src="<?php echo $thumb_img; ?>" alt="food_pic" />
-			</div>
-			<div class="col-md-6" id="food_record_info">
-				<div class="form-group" id="user_name">
-					<span class="label label-default glyphicon glyphicon-user"> User</span> <?php echo $food->user_name; ?>
+				<div class="thumbnail col-md-6" id="food_img_thumb">
+	                <img class="img-rounded" id="food-record-img-thumb" src="<?php echo $thumb_img; ?>" alt="food_pic" />
 				</div>
-				<div class="form-group" id="reg_date">
-					<span class="label label-default glyphicon glyphicon-calendar"> Date</span> <?php echo $food->reg_date; ?>
-				</div>
-				<div class="form-group" id="food_name">
-					<span class="label label-default glyphicon glyphicon-cutlery"> Food</span> <?php echo $food->food_name; ?>
-				</div>
-				<div class="form-group" id="ratings">
-      				<span class="label label-default glyphicon glyphicon-star-empty"> Rate</span>
-      				<div id="rate-bar">
+				<div class="col-md-6" id="food_record_info">
+					<div class="form-group" id="user_name">
+						<span class="label label-default glyphicon glyphicon-user"> User</span> <?php echo $food->user_name; ?>
+					</div>
+					<div class="form-group" id="reg_date">
+						<span class="label label-default glyphicon glyphicon-calendar"> Date</span> <?php echo $food->reg_date; ?>
+					</div>
+					<div class="form-group" id="food_name">
+						<span class="label label-default glyphicon glyphicon-cutlery"> Food</span> <?php echo $food->food_name; ?>
+					</div>
+					<div class="form-group" id="ratings">
+	      				<span class="label label-default glyphicon glyphicon-star-empty"> Rate</span>
+	      				<div id="rate-bar">
       					<?php
 $i=0;
 for($i=0; $i <$food->ratings; $i++)
@@ -44,14 +45,21 @@ for(; $i < 5; $i++)
 }
 
 ?>
+						</div>
+	      			</div>
+					<div class="well well-sm" id="food_comments">
+						<?php echo $food->comments; ?>
 					</div>
-      			</div>
-				<div class="well well-sm" id="food_comments">
-					<?php echo $food->comments; ?>
 				</div>
 			</div>
-			
-
+			<div class="row">
+				<div class="panel panel-default">
+					<div class="panel-heading">Map</div>
+					<div class="panel-body">
+				    	<div id="map_canvas"style="width:400px; height:200px;"></div> 
+				  	</div>
+				</div>			
+			</div>
 			<script type="text/javascript">
   window.onload = function() {
     initialize();
@@ -74,10 +82,9 @@ for(; $i < 5; $i++)
 });  
   } 
  </script> 
-			<div id="map_canvas"style="width:500px; height:300px;"></div> 
 			
 
-		</div><!-- .-->
-	</div><!-- #container -->
-</div><!-- #mainWrapper -->
+		</div><!-- #food_body-->
+	</div><!-- #food_container -->
+</div><!-- #food_page -->
 

@@ -55,3 +55,8 @@ footer div {
 	-moz-border-radius: 5px;
 	border-radius: 5px;
 }
+
+.row {
+	margin: 0px;
+	padding: 10px;
+}
