@@ -209,7 +209,6 @@
 /* No media query since this is the default in Bootstrap */
 @media (max-width: 767px){
 	#upload_container {
-		width: 100%;
 		margin: 20% 5px;
 	}
 
@@ -223,7 +222,6 @@
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) { 
 	#upload_container {
-		width: 100%;
 		margin: 20% 20%;
 	}
 }
