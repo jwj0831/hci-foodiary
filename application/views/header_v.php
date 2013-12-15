@@ -36,11 +36,24 @@
 			<div class="navbar navbar-default navbar-fixed-top" role="navigation">
 				<div class="container-top">
 					<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-							<span class="sr-only">Toggle navigation</span>
-							<span class="icon-bar"></span>
-							<span class="icon-bar"></span>
-						</button>
+						<a href="/hci-foodiary/new_food" id="new_btn" class="navbar-toggle btn-default pull-left"><i class="fa fa-plus"></i></a>
+<?php
+	if( @$this->session->userdata('logged_in') == TRUE ) {
+		$ses_user=$this->session->userdata('User');
+?>	
+
+						<a href="/hci-foodiary/me">
+							<img id="user_login_thumb" src="https://graph.facebook.com/<?php echo $ses_user['id']; ?>/picture" /> <label id="user_name"><?php echo $ses_user['name']; ?></label>
+						</a>
+<?php 
+}
+else {
+?>	
+							<a href="/hci-foodiary/facebook_login" id="login_btn" class="navbar-toggle btn-default" ><span class="glyphicon glyphicon-log-in"></span></a>
+						</ul>
+<?php
+}
+?>		
 						<a class="navbar-brand" href="/hci-foodiary">Foodiary</a>
 					</div>
 					<div class="collapse navbar-collapse">
