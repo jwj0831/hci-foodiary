@@ -95,8 +95,10 @@ class New_food extends CI_Controller {
 				
 				$upload_data = $this->upload->data();
 				$upload_data['user_name'] = $ses_user['name'];
+				$upload_data['user_img'] = "https://graph.facebook.com/".$ses_user['id']."/picture";
 				$upload_data['food_name'] = $this->input->post('food_name', true);
 				$upload_data['ratings'] = $this->input->post('ratings', true);
+				$upload_data['like_num'] = 0;
 				$upload_data['geo_lat'] = $this->input->post('geo_lat', true);
 				$upload_data['geo_long'] = $this->input->post('geo_long', true);
 				$upload_data['comments'] = $this->input->post('comments', true);

@@ -15,11 +15,22 @@ foreach ($list as $lt)
 		$thumb_img = '/hci-foodiary/uploads/'.$lt->file_name;
 	}
 ?>
-	        <div class="item  col-xs-4 col-lg-4">
-	            <div class="thumbnail" id="grid_thumb">
-	               <a href="<?php echo '/hci-foodiary/foods/record/'.$lt->id ?>" class="food_record_link">
-	               		<img id="food_img" class="group list-group-image" src="<?php echo $thumb_img; ?>" alt="" />
-	               </a>
+			<div class="item  col-xs-4 col-lg-4">
+	        	<div class="thumbnail" id="grid_thumb">
+	            	<a href="<?php echo '/hci-foodiary/foods/record/'.$lt->id ?>" class="food_record_link">
+	                	<img id="food_img" class="group list-group-image" src="<?php echo $thumb_img; ?>" alt="" />
+	               	</a>
+	              	<div class="row user_info">
+	               		<div class="col-md-7">
+	               			<label for="" id="user_name">
+	               				<?php echo $lt->user_name; ?>
+	               			</label>
+	               			<img src="<?php echo $lt->user_img; ?>" alt="user_img" id="user_thumb" />
+	               		</div>
+	               		<div class="col-md-5">
+	               			liked <?php echo $lt->like_num; ?> peoples
+	               		</div>
+	               	</div>
 	                <div class="caption">
 	                    <div class="row">
 	                        <div class="col-md-7">
