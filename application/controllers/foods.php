@@ -28,17 +28,18 @@ class Foods extends CI_Controller {
 	
 	public function index()
 	{
-		if (BROWSER_TYPE == 'W'){
-			$offset = 0;
-			$num_of_records = 9;
-			$data['list'] = $this->foodiary_m->get_food_records('food_records', $offset, $num_of_records);
+		$offset = 0;
+		$num_of_records = 9;
+		$data['list'] = $this->foodiary_m->get_food_records('food_records', $offset, $num_of_records);
+		
+		$ses_user = $this->session->userdata('User');
+		$data['liked'] = $this->foodiary_m->get_my_liked_records('like_records', $offset, $num_of_records, $ses_user['name']);
 			
-			$ses_user = $this->session->userdata('User');
-			$data['liked'] = $this->foodiary_m->get_my_liked_records('like_records', $offset, $num_of_records, $ses_user['name']);
+		if (BROWSER_TYPE == 'W'){
 			$this->load->view('foods/foods_v', $data);
 		}
 		else if (BROWSER_TYPE == 'M'){
-			$this->load->view('mobile/foods/m_foods_v');
+			$this->load->view('mobile/foods/m_foods_v', $data);
 		}	
 	}
 	
