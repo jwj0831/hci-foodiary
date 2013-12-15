@@ -19,11 +19,11 @@ foreach ($list as $lt)
 	        	<div class="thumb" id="grid_thumb">
 	        		<div class="btn-toolbar hidden_btn">
 					  	<div class="btn-group">
-					  		<a href="#" id="thumbs_btn"  class="btn btn-default" role="button"><i class="fa fa-thumbs-up"></i></a>
-					  		<a href="#" class="btn btn-default"><i class="fa fa-share-square"></i></a>
+					  		<button type="button" value="<?php echo $lt->id."&".$lt->user_name; ?>" class="btn btn-default thumbs_btn" role="button"><i class="fa fa-thumbs-up"></i></button>
+					  		<button type="button" value="<?php echo $lt->id; ?>" class="btn btn-default share_btn"><i class="fa fa-share-square"></i></button>
 					  	</div>
 					  	<div class="btn-group">
-					  		<a href="#" class="btn btn-default"><i class="fa fa-trash-o"></i></a>
+					  		<button type="button" value="<?php echo $lt->id; ?>" class="btn btn-default del_btn"><i class="fa fa-trash-o"></i></button>
 					  	</div>
 					</div>
 	        		

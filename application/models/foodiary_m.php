@@ -10,6 +10,23 @@ class Foodiary_m extends CI_Model
 		parent::__construct();
 	}
 	
+	function add_like_food($user_name, $food_id)
+	{
+		$insert_array = array(
+			'user_name' => $user_name,
+			'food_id' => $food_id
+		);
+		$this->db->insert('like_records', $insert_array);	
+	}
+	
+	function check_like_food($user_name, $food_id)
+	{
+		$sql = "SELECT * FROM like_records WHERE user_name='".$user_name."' AND food_id='".$food_id."'";
+   		$query = $this->db->query($sql);
+		$result = $query->num_rows();
+		return $result;
+	}
+	
 	function insert_new_food_records($arrays)
 	{
 		$detail = array (

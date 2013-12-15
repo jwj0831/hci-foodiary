@@ -27,16 +27,35 @@ class AjaxFood extends CI_Controller {
 
 	function index()
 	{
+		
+	}
+	
+	function likeFood() {
+		$data = $this->input->post('data', true);
+		$data = json_decode($data);
+		$food_id = $data->food_id;
+		$user_name = $data->user_name;
+		
+		$check_val = $this->foodiary_m->check_like_food($user_name, $food_id);
+		
+		if($check_val > 0) {
+			return "You Already Checked!";
+		}
+		else {
+			$data = $this->foodiary_m->add_like_food($user_name, $food_id);
+			return "Thumbs Up!";
+		}
+	}
+	
+	
+	function getMoreFoods()
+	{
 		$data = $this->input->post('data', true);
 		$data = json_decode($data);
 		$offset = $data->offset;
 		$num_of_records = 9;
 		$data = $this->foodiary_m->get_food_records('food_records', $offset, $num_of_records);
-		$this->returnFoods($data);
-	}
-	
-	function returnFoods($data)
-	{
+		
 		$i=1;
 		foreach ($data as $lt)
 		{

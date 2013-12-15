@@ -39,7 +39,30 @@
 			$('#login_cancle').click(function(){
 				window.location.href = "http://117.16.146.70/hci-foodiary";
 			});
-		
+			
+			//Clcik Like Button
+			$(".thumbs_btn").click(function(){
+				var valArrays = $(this).val().split("&");
+				var myData = {'food_id' : valArrays[0], 'user_name': valArrays[1]};
+				var myDataString = JSON.stringify(myData);
+				var cookie = getCookie('csrf_cookie_name');
+				$.ajax({
+					type: 'post',
+					url: '/hci-foodiary/ajaxFood/likeFood',
+					data: {'data': myDataString, 'csrf_test_name':cookie},
+					ContentType: "application/json",
+					error:function(xhr, ajaxOptions, thrownError) {//any errors?
+						alert(thrownError);//alert with HTTP error
+						//$('.animation_image').hide();//hide loading image
+						loading = false;
+					},
+					success:function(result){
+						console.log(result);
+					}
+				});
+				
+			});
+			
 	    	$(document).ready(function() {
 				// input rating value
 				$('.starrr').on('starrr:change', function(e, value){
@@ -75,7 +98,7 @@
 							var myDataString = JSON.stringify(myData);
 							$.ajax({
 								type: 'post',
-								url: '/hci-foodiary/ajaxFood',
+								url: '/hci-foodiary/ajaxFood/getMoreFoods',
 								data: {'data': myDataString, 'csrf_test_name':cookie},
 								ContentType: "application/json",
 								error:function(xhr, ajaxOptions, thrownError) {//any errors?
