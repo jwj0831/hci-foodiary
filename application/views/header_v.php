@@ -62,33 +62,26 @@ else {
 								<a href="/hci-foodiary/new_food"><i class="fa fa-plus"></i> New</a>
 							</li>
 <?php
-	if( @$this->session->userdata('logged_in') == TRUE ) {
+	// NOT Logged In?
+	if( @$this->session->userdata('logged_in') != TRUE ) {
 		$ses_user=$this->session->userdata('User');
 ?>				
 							<li id="logged_info">
-								<a href="<?php echo $this->session->userdata('logout'); ?>"><span class="glyphicon glyphicon-log-out"></spans> Log out</a>
+								<a href="/hci-foodiary/facebook_login" id="login_btn" ><span class="glyphicon glyphicon-log-in"></span> Log In</a>
 							</li>
+						</ul>
+							
 <?php 
 }
 else {
 ?>	
 							<li id="logged_info">
-								<a href="/hci-foodiary/facebook_login" id="login_btn" ><span class="glyphicon glyphicon-log-in"></span> Log In</a>
+								<a href="<?php echo $this->session->userdata('logout'); ?>"><span class="glyphicon glyphicon-log-out"></spans> Log out</a>
 							</li>
 						</ul>
-<?php
-}
-?>
-<?php
-	if( @$this->session->userdata('logged_in') == TRUE ) {
-		$ses_user=$this->session->userdata('User');
-?>
 						<a href="/hci-foodiary/me" class="pull-right" id="me_btn">
 							<img id="user_login_thumb" src="https://graph.facebook.com/<?php echo $ses_user['id']; ?>/picture" /> <label id="user_name"><?php echo $ses_user['name']; ?></label>
 						</a>
-<?php
-}
-?>
 					</div><!-- .nav-collapse -->
 				</div><!-- .container-top -->
 			</div><!-- .navbar -->
