@@ -43,6 +43,7 @@ class Foodiary_m extends CI_Model
 		$data = array(
 			'like_num' => $updated_like_num
 		);
+		
 		$this->db->where('id', $id);
 		$this->db->update('food_records', $data); 
 		
@@ -85,6 +86,17 @@ class Foodiary_m extends CI_Model
 		$result = $query->row();
 		return $result;
 	}
+	
+	function get_my_liked_records($table, $offset, $num_of_records, $user_name)
+	{
+		$limit_query = ' LIMIT '.$offset.', '.$num_of_records;
+		
+		$sql = "SELECT food_id FROM ".$table." WHERE user_name='".$user_name."' ORDER BY id DESC".$limit_query;
+   		$query = $this->db->query($sql);
+		$result = $query->result();
+		return $result;
+	}
+	
 	
 	function get_food_records($table, $offset, $num_of_records)
 	{

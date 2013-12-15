@@ -32,6 +32,9 @@ class Foods extends CI_Controller {
 			$offset = 0;
 			$num_of_records = 9;
 			$data['list'] = $this->foodiary_m->get_food_records('food_records', $offset, $num_of_records);
+			
+			$ses_user = $this->session->userdata('User');
+			$data['liked'] = $this->foodiary_m->get_my_liked_records('like_records', $offset, $num_of_records, $ses_user['name']);
 			$this->load->view('foods/foods_v', $data);
 		}
 		else if (BROWSER_TYPE == 'M'){

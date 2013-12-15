@@ -42,10 +42,12 @@
 			
 			//Clcik Like Button
 			$(".thumbs_btn").click(function(){
-				var valArrays = $(this).val().split("&");
+				var currentObj = $(this);
+				var valArrays = currentObj.val().split("&");
 				var myData = {'food_id' : valArrays[0], 'user_name': valArrays[1]};
 				var myDataString = JSON.stringify(myData);
 				var cookie = getCookie('csrf_cookie_name');
+				alert(myDataString);
 				$.ajax({
 					type: 'post',
 					url: '/hci-foodiary/ajaxFood/likeFood',
@@ -58,9 +60,13 @@
 					},
 					success:function(result){
 						//console.log(result);
-						var rootObj = $(this).parent(".btn-group").parent(".btn-toolbar").parent(".thumb");
-						rootObj.children(".user_info_area").children(".row").children(".like_label").children(".like_num").html(result);
-					
+						if(result == "") {
+							alert("You already checked");
+						}
+						else {
+							var rootObj = currentObj.parent(".btn-group").parent(".btn-toolbar").parent(".thumb");
+							rootObj.children(".user_info_area").children(".row").children(".like_label").children(".like_num").html(result);
+						}
 					}
 				});
 				

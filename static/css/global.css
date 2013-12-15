@@ -1,7 +1,7 @@
 body {
 	background-image: url('../images/bg_repeat.png');
 }
-
+/*
 
 .btn-default,
 .btn-primary,
@@ -23,7 +23,7 @@ body {
     margin-top: 3px;
     margin-bottom: -3px;
 }
-
+*/
 .login_out_info {
 	padding-top: 5px;
 }
