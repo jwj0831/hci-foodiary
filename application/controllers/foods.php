@@ -97,8 +97,8 @@ class Foods extends CI_Controller {
 			$data = $this->foodiary_m->get_food("food_records", $food_id);
 			
 			if($ses_user['name'] == $data->user_name) {
-				$result = $this->foodiary_m->delete_foods($food_id);
-				alert('Successfully Delete! '.$result, '/hci-foodiary');
+				$this->foodiary_m->delete_foods($food_id);
+				alert('Successfully Delete! ', '/hci-foodiary');
 			}
 			else {
 				alert('You are not a onwer', '/hci-foodiary');

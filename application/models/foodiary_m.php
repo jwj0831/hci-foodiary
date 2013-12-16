@@ -11,10 +11,8 @@ class Foodiary_m extends CI_Model
 	}
 	
 	function delete_food($food_id) {
-		$sql = "DELETE FROM food_records WHERE food_id='".$food_id."'";
-		$query = $this->db->query($sql);
-		$result = $query->row();
-		return $result;
+		$this->db->where('id', $food_id);
+		$this->db->delete('food_records'); 
 	}
 	
 	function add_like_food($user_name, $food_id)
