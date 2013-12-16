@@ -77,7 +77,7 @@ class AjaxFood extends CI_Controller {
 					  			<button type="button" value="'.$lt->id.'" class="btn btn-default share_btn"><i class="fa fa-share-square"></i></button>
 					  		</div>
 					  		<div class="btn-group">';
-							$del_url = "location.href='/hci-foodiary/".$lt->user_name."/".$lt->id."'";
+							$del_url = "location.href='/hci-foodiary/delete/".$lt->user_name."/".$lt->id."'";
 		    echo				'<button type="button" onclick="'.$del_url.'" class="btn btn-default del_btn"><i class="fa fa-trash-o"></i></button>
 					  		</div>
 						</div>

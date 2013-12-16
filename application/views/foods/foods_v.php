@@ -23,7 +23,7 @@ foreach ($list as $lt)
 					  		<button type="button" value="<?php echo $lt->id; ?>" class="btn btn-default share_btn"><i class="fa fa-share-square"></i></button>
 					  	</div>
 					  	<div class="btn-group">
-					  		<?php $del_url = "location.href='/hci-foodiary/".$lt->user_name."/".$lt->id."'"; ?>
+					  		<?php $del_url = "location.href='/hci-foodiary/delete/".$lt->user_name."/".$lt->id."'"; ?>
 					  		<button type="button"  onClick="<?php echo $del_url;?>" class="btn btn-default del_btn"><i class="fa fa-trash-o"></i></button>
 					  	</div>
 					</div>
