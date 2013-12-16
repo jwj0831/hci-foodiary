@@ -16,12 +16,12 @@
 			if(currentPage == "new_food") {
 				$("#new_menu").addClass("active");
 				$("#me_menu").removeClass("active");
-				$("$recommend_menu").removeClass("activce");
+				$("#recommend_menu").removeClass("activce");
 			}
 			else if(currentPage == "foods") {
 				$("#new_menu").removeClass("active");
 				$("#me_menu").addClass("active");
-				$("$recommend_menu").removeClass("activce");
+				$("#recommend_menu").removeClass("activce");
 				
 				var widthVal = $(".panel").width();
 				$("#map_canvas").width(widthVal).height(200);
@@ -30,12 +30,12 @@
 			else if(currentPage == "me") {
 				$("#new_menu").removeClass("active");
 				$("#me_menu").addClass("active");
-				$("$recommend_menu").removeClass("activce");
+				$("#recommend_menu").removeClass("activce");
 			}
 			else if(currentPage == "recommend") {
 				$("#new_menu").removeClass("active");
 				$("#me_menu").removeClass("active");
-				$("$recommend_menu").addClass("activce");
+				$("#recommend_menu").addClass("activce");
 			}
 			else if(currentPage == "") {
 				// toolbar 
