@@ -463,7 +463,7 @@
 /* No media query since this is the default in Bootstrap */
 @media (max-width: 767px){
 	#login_form {
-		margin: 25% auto;	
+		margin: 30% auto;	
 	} 
 }
 
@@ -478,8 +478,6 @@
 		margin: 200px auto;	
 	} 
 }
-
-
 
 
 .form-signin {
