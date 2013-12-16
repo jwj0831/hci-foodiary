@@ -24,7 +24,7 @@ foreach ($list as $lt)
 					  	</div>
 					  	<div class="btn-group">
 					  		<?php $del_url = "location.href='/hci-foodiary/".$lt->user_name."/".$lt->id."'"; ?>
-					  		<button type="button"  onClick="<?php $del_url;?>" class="btn btn-default del_btn"><i class="fa fa-trash-o"></i></button>
+					  		<button type="button"  onClick="<?php echo $del_url;?>" class="btn btn-default del_btn"><i class="fa fa-trash-o"></i></button>
 					  	</div>
 					</div>
 	        		
