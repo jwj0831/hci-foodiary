@@ -33,7 +33,7 @@ class Delete extends CI_Controller {
 		
 		$data['food'] = $this->foodiary_m->get_food("food_records", $food_id);
 		
-		if($se_user['name'] != $food->user_name) {
+		if($ses_user['name'] != $food->user_name) {
 			alert('You are not a onwer', '/hci-foodiary');
 		}
 		else {
