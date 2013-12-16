@@ -23,7 +23,7 @@ class Foods extends CI_Controller {
 		parent::__construct();
 		$this->load->database();
 		$this->load->model('foodiary_m');
-		$this->load->helper(array('form', 'url'));
+		$this->load->helper(array('form', 'url', 'array'));
 	}
 	
 	public function index()
@@ -105,9 +105,9 @@ class Foods extends CI_Controller {
 			}			
 
 			} // session if block
-			else{
-				alert('Please login to upload', '/hci-foodiary');
-			}
+		else{
+			alert('Please login to upload', '/hci-foodiary');
+		}
 	}
 }
 
