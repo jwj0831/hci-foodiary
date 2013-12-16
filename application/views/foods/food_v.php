@@ -47,6 +47,7 @@ for(; $i < 5; $i++)
 ?>
 						</div>
 	      			</div>
+	      			<span class="label label-default">Commets</span>
 					<div class="well well-sm" id="food_comments">
 						<?php echo $food->comments; ?>
 					</div>
