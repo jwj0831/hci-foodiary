@@ -18,11 +18,11 @@ foreach ($list as $lt)
 			<div class="item col-md-4">
 	        	<div class="thumbnail">
 	        		<div class="btn-toolbar hidden_btn">
-					  	<div class="btn-group">
+					  	<div class="btn-group hover_grp first_hover_grp">
 					  		<button type="button" value="<?php echo $lt->id."&".$lt->user_name; ?>" class="btn btn-default thumbs_btn hover_btn" role="button"><i class="fa fa-thumbs-up"></i></button>
 					  		<button type="button" value="<?php echo $lt->id; ?>" class="btn btn-default share_btn hover_btn"><i class="fa fa-share-square"></i></button>
 					  	</div>
-					  	<div class="btn-group">
+					  	<div class="btn-group hover_grp">
 					  		<?php $del_url = "location.href='/hci-foodiary/foods/delete/".$lt->id."'"; ?>
 					  		<button type="button"  onClick="<?php echo $del_url;?>" class="btn btn-default del_btn hover_btn"><i class="fa fa-trash-o"></i></button>
 					  	</div>

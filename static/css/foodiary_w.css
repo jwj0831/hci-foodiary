@@ -151,7 +151,12 @@
 		margin-right: 40px;
 		z-index: 1;
 	}
-	
+	.hover_grp {
+		margin-top: 5px;
+	}
+	.first_hover_grp {
+		margin-left: 20px;
+	}
 	.hover_btn {
 		width: 60px;
 		font-size: 32px;
@@ -189,6 +194,12 @@
 		margin-left: 10%;
 		margin-right: 10%;
 		z-index: 1;
+	}
+	
+	.hover_btn {
+		width: 36px;
+		font-size: 14px;
+		height: 36px;
 	}
 	
 	.food_img {
