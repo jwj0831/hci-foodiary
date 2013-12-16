@@ -88,13 +88,11 @@
 				window.location.href = "http://117.16.146.70/hci-foodiary";
 			});
 			
-			//Clcik Like Button
-			$(".thumbnail").hover( function(e){
-				$(this).children(".btn-toolbar").toggleClass('hidden_btn');
-			});
-			
-			
 	    	$(document).ready(function() {
+	    		$(".thumbnail").hover( function(e){
+					$(this).children(".btn-toolbar").toggleClass('hidden_btn');
+				});
+	    		
 	    		
 				// input rating value
 				$('.starrr').on('starrr:change', function(e, value){
