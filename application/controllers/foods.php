@@ -92,7 +92,7 @@ class Foods extends CI_Controller {
 	{
 		if( @$this->session->userdata('logged_in') == TRUE ) {
 			$ses_user = $this->session->userdata('User');
-			$food_id = $this->uri->segment(2);
+			$food_id = $this->uri->segment(3);
 			
 			$data['food'] = $this->foodiary_m->get_food("food_records", $food_id);
 			
