@@ -117,7 +117,7 @@
 				var cookie = getCookie('csrf_cookie_name');
 				
 				$(window).scroll(function() {//detect page scroll
-					if ($(window).scrollTop() + $(window).height() == jQuery(document).height())//user scrolled to bottom of the page?
+					if ($(window).scrollTop() + $(window).height() == $(document).height())//user scrolled to bottom of the page?
 					{
 						// Total Count 
 						//if (track_load <= total_groups && loading == false)//there's more data to load

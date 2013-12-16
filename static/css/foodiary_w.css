@@ -365,6 +365,8 @@
 .starrr .upload{
 	text-align: center;
 	font-size: 40px;
+	display: inline;
+	margin-left: 10px;
 }
 
 

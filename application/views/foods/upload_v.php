@@ -40,9 +40,11 @@
 				<input type="hidden" class="geo-location" id="geo-lat-input" name="geo_lat" value="0.0">
 				<input type="hidden" class="geo-location" id="geo-long-input" name="geo_long" value="0.0">
 			</div>
-			<div id="rating-area">
-				<div class="starrr upload"></div>
-				<input type="hidden" class="rating-location" id="rating-val" name="ratings" value="0">
+			<div class="form-group">
+				<div id="rating-area">
+					<div class="starrr upload"></div>
+					<input type="hidden" class="rating-location" id="rating-val" name="ratings" value="0">
+				</div>
 			</div>
 			<dvi class="comment_area">
 				<div id="panel-area" class="panel panel-default">
@@ -52,7 +54,7 @@
 					</div>
 				</div>
 			</dvi>
-			<div id="btn-area">
+			<div id="btn-area" class="form-group">
 				<button type="button" class="btn btn-primary" id="upload-btn">Send</button>
 			</div>
 			<div class="error">
