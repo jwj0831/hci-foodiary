@@ -28,18 +28,7 @@ class Delete extends CI_Controller {
 	
 	public function index()
 	{
-		$food_id = $this->uri->segment(2);
-		$ses_user = $this->session->userdata('User');
-		
-		$data['food'] = $this->foodiary_m->get_food("food_records", $food_id);
-		
-		if($ses_user['name'] != $food->user_name) {
-			alert('You are not a onwer', '/hci-foodiary');
-		}
-		else {
-			$this->foodiary_m->delete_foods($food_id);
-			alert('Successfully Delete!', '/hci-foodiary');
-		}
+		delete();
 	}
 	
 	
@@ -77,6 +66,20 @@ class Delete extends CI_Controller {
 		*/
 	}
 	
+	public function delete() {
+		$food_id = $this->uri->segment(2);
+		$ses_user = $this->session->userdata('User');
+		
+		$data['food'] = $this->foodiary_m->get_food("food_records", $food_id);
+		
+		if($ses_user['name'] != $food->user_name) {
+			alert('You are not a onwer', '/hci-foodiary');
+		}
+		else {
+			$this->foodiary_m->delete_foods($food_id);
+			alert('Successfully Delete!', '/hci-foodiary');
+		}
+	}
 	
 }
 
