@@ -129,7 +129,7 @@ class Foodiary_m extends CI_Model
 	{
 		$limit_query = ' LIMIT '.$offset.', '.$num_of_records;
 		
-		$sql = "SELECT id, user_name, user_img, file_name, food_name, ratings, like_num FROM ".$table." ORDER BY ratings DESC ORDER BY reg_date DESC".$limit_query;
+		$sql = "SELECT id, user_name, user_img, file_name, food_name, ratings, like_num FROM ".$table." ORDER BY ratings DESC, reg_date DESC".$limit_query;
    		$query = $this->db->query($sql);
 		$result = $query->result();
 		return $result;
