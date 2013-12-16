@@ -23,7 +23,7 @@ class Foods extends CI_Controller {
 		parent::__construct();
 		$this->load->database();
 		$this->load->model('foodiary_m');
-		$this->load->helper(array('form', 'url', 'array'));
+		$this->load->helper(array('form', 'url', 'alert'));
 	}
 	
 	public function index()
