@@ -35,7 +35,7 @@ class Recommend extends CI_Controller {
 		$ses_user = $this->session->userdata('User');
 		$data['liked'] = $this->foodiary_m->get_my_liked_records('like_records', $offset, $num_of_records, $ses_user['name']);
 			
-		$this->load->view('foods/foods_v', $data);
+		$this->load->view('foods/recommend_v', $data);
 			/*
 		if (BROWSER_TYPE == 'W'){
 			$this->load->view('foods/foods_v', $data);
@@ -81,12 +81,6 @@ class Recommend extends CI_Controller {
 		*/
 	}
 	
-	public function record()
-	{
-		$id = $this->uri->segment(3);
-		$data['food'] = $this->foodiary_m->get_food('food_records', $id);
-		$this->load->view('foods/food_v', $data);
-	}
 }
 
 /* End of file welcome.php */

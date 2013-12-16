@@ -61,6 +61,9 @@ else {
 							<li id="new_menu">
 								<a href="/hci-foodiary/new_food"><span class="glyphicon glyphicon-plus"></span> New</a>
 							</li>
+							<li id="recommend_menu">
+								<a href="/hci-foodiary/recommend"><span class="glyphicon glyphicon-thumbs-up"></span> Recommend</a>
+							</li>
 <?php
 	// NOT Logged In?
 	if( @$this->session->userdata('logged_in') != TRUE ) {
