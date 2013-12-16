@@ -28,7 +28,25 @@ class Delete extends CI_Controller {
 	
 	public function index()
 	{
-		delete();
+		
+		if( @$this->session->userdata('logged_in') == TRUE ) {
+			$ses_user = $this->session->userdata('User');
+			$food_id = $this->uri->segment(2);
+			
+			$data['food'] = $this->foodiary_m->get_food("food_records", $food_id);
+			
+			if($ses_user['name'] == $food->user_name) {
+				$result = $this->foodiary_m->delete_foods($food_id);
+				alert('Successfully Delete! '.$result, '/hci-foodiary');
+			}
+			else {
+				alert('You are not a onwer', '/hci-foodiary');
+			}			
+
+		} // session if block
+		else{
+			alert('Please login to upload', '/hci-foodiary');
+		}
 	}
 	
 	public function _remap($method)
@@ -41,44 +59,6 @@ class Delete extends CI_Controller {
 			}
 			
 			$this->load->view('footer_v');
-		/*
-		if (BROWSER_TYPE == 'W'){
-			$this->load->view('header_v');
-		
-			if( method_exists($this, $method) )
-			{
-				$this->{"{$method}"}();
-			}
-			
-			$this->load->view('footer_v');
-		}
-		else if (BROWSER_TYPE == 'M') {
-			$this->load->view('mobile/m_header_v');
-		
-			if( method_exists($this, $method) )
-			{
-				$this->{"{$method}"}();
-			}
-			
-			$this->load->view('mobile/m_footer_v');
-		}
-		*/
-	}
-	
-	public function delete() {
-		$food_id = $this->uri->segment(2);
-		
-		$ses_user = $this->session->userdata('User');
-		
-		$data['food'] = $this->foodiary_m->get_food("food_records", $food_id);
-		
-		if($ses_user['name'] != $food->user_name) {
-			alert('You are not a onwer', '/hci-foodiary');
-		}
-		else {
-			$result = $this->foodiary_m->delete_foods($food_id);
-			alert('Successfully Delete! '.$result, '/hci-foodiary');
-		}
 	}
 	
 }

@@ -36,14 +36,7 @@ class Recommend extends CI_Controller {
 		$data['liked'] = $this->foodiary_m->get_my_liked_records('like_records', $offset, $num_of_records, $ses_user['name']);
 			
 		$this->load->view('foods/recommend_v', $data);
-			/*
-		if (BROWSER_TYPE == 'W'){
-			$this->load->view('foods/foods_v', $data);
-		}
-		else if (BROWSER_TYPE == 'M'){
-			$this->load->view('mobile/foods/m_foods_v', $data);
-		}	
-			 * */
+
 	}
 	
 	
@@ -57,28 +50,6 @@ class Recommend extends CI_Controller {
 			}
 			
 			$this->load->view('footer_v');
-		/*
-		if (BROWSER_TYPE == 'W'){
-			$this->load->view('header_v');
-		
-			if( method_exists($this, $method) )
-			{
-				$this->{"{$method}"}();
-			}
-			
-			$this->load->view('footer_v');
-		}
-		else if (BROWSER_TYPE == 'M') {
-			$this->load->view('mobile/m_header_v');
-		
-			if( method_exists($this, $method) )
-			{
-				$this->{"{$method}"}();
-			}
-			
-			$this->load->view('mobile/m_footer_v');
-		}
-		*/
 	}
 	
 	
