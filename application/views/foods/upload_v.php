@@ -41,7 +41,7 @@
 				<input type="hidden" class="geo-location" id="geo-long-input" name="geo_long" value="0.0">
 			</div>
 			<div class="form-group">
-				<label for="rating-area">Rating: </label>
+				<label id="rating-label" for="rating-area">Rating: </label>
 				<div id="rating-area">
 					<div id="rating-upload" class="starrr "></div>
 					<input type="hidden" class="rating-location" id="rating-val" name="ratings" value="0">
