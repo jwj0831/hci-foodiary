@@ -10,6 +10,11 @@ class Foodiary_m extends CI_Model
 		parent::__construct();
 	}
 	
+	function delete_food($food_id) {
+		$this->db->where('id', $id);
+		$this->db->delete('food_records'); 
+	}
+	
 	function add_like_food($user_name, $food_id)
 	{
 		$insert_array = array(
