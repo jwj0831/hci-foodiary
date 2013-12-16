@@ -380,7 +380,9 @@
 }
 
 #submit-form {
-	margin-top: 5px;
+	margin-top: 10px;
+	padding-bottom: 10px;
+	text-align: center;
 }
 
 /*
