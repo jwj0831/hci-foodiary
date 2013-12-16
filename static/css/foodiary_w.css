@@ -457,9 +457,30 @@
 /*
  * Login
  */
-#login_form {
-	margin: 200px auto;	
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+@media (max-width: 767px){
+	#login_form {
+		margin: 15% auto;	
+	} 
 }
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+	#login_form {
+		margin: 200px auto;	
+	} 
+}
+
+
+
 
 .form-signin {
   max-width: 400px; 
