@@ -89,8 +89,10 @@
 			});
 			
 	    	$(document).ready(function() {
-	    		$(".thumbnail").hover( function(e){
-					$(this).children(".btn-toolbar").toggleClass('hidden_btn');
+	    		$('.thumbnail').on('mouseenter', '.touch', function() {
+				    $(this).children(".btn-toolbar").toggleClass('hidden_btn');
+				}).on('mouseleave', '.touch', function() {
+				    $(this).children(".btn-toolbar").toggleClass('hidden_btn');
 				});
 	    		
 	    		
@@ -141,9 +143,12 @@
 									console.log(result);
 									loading = false;
 									offset = offset + 9;
+									
+									/*
 									$(".thumbnail").hover( function(e){
 										$(this).children(".btn-toolbar").toggleClass('hidden_btn');
 									});
+									*/
 								}
 							});
 						}
