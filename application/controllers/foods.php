@@ -87,6 +87,28 @@ class Foods extends CI_Controller {
 		$data['food'] = $this->foodiary_m->get_food('food_records', $id);
 		$this->load->view('foods/food_v', $data);
 	}
+	
+	public function delete()
+	{
+		if( @$this->session->userdata('logged_in') == TRUE ) {
+			$ses_user = $this->session->userdata('User');
+			$food_id = $this->uri->segment(2);
+			
+			$data['food'] = $this->foodiary_m->get_food("food_records", $food_id);
+			
+			if($ses_user['name'] == $food->user_name) {
+				$result = $this->foodiary_m->delete_foods($food_id);
+				alert('Successfully Delete! '.$result, '/hci-foodiary');
+			}
+			else {
+				alert('You are not a onwer', '/hci-foodiary');
+			}			
+
+			} // session if block
+			else{
+				alert('Please login to upload', '/hci-foodiary');
+			}
+	}
 }
 
 /* End of file welcome.php */
