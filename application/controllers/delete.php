@@ -76,8 +76,8 @@ class Delete extends CI_Controller {
 			alert('You are not a onwer', '/hci-foodiary');
 		}
 		else {
-			$this->foodiary_m->delete_foods($food_id);
-			alert('Successfully Delete!', '/hci-foodiary');
+			$result = $this->foodiary_m->delete_foods($food_id);
+			alert('Successfully Delete! '.$result, '/hci-foodiary');
 		}
 	}
 	
