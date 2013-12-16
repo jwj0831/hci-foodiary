@@ -5,7 +5,7 @@ class Delete extends CI_Controller {
 	/**
 	 * Index Page for this controller.
 	 *
-	 * Maps to the following URL
+	 * Maps to the following !URL
 	 * 		http://example.com/index.php/welcome
 	 *	- or -  
 	 * 		http://example.com/index.php/welcome/index
@@ -31,9 +31,9 @@ class Delete extends CI_Controller {
 		$food_id = $this->uri->segment(2);
 		$ses_user = $this->session->userdata('User');
 		
-		$temp_result = $this->foodiary_m->get_food("food_records", $food_id);
+		$data['food'] = $this->foodiary_m->get_food("food_records", $food_id);
 		
-		if($se_user['name'] != $temp_result->user_name) {
+		if($se_user['name'] != $food->user_name) {
 			alert('You are not a onwer', '/hci-foodiary');
 		}
 		else {
