@@ -53,7 +53,7 @@
 		line-height: 50px;
 	}
 	#new_btn, #login_btn, #recommend_btn {
-		width: 40px;
+		width: 100px;
 	}
 
 	#recommend_btn.active {
