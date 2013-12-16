@@ -11,9 +11,6 @@
 			<div id="upload_img">
                 <img class="img-rounded" id="food_img" src="" alt="food_pic" />
 			</div>
-			<div class="form-group" id="food_name_input">
-				<input type="text" class="form-control" id="input_name" name="food_name" value="<?php echo set_value('food_name'); ?>" placeholder="Input Food's name">
-			</div>
 			<div id="img_input">
 				<input multiple id="fileUpload" name="userfile" accept="image/*;capture=camera" type="file" value="<?php echo set_value('userfile'); ?>" onchange="PreviewImage();"/>
                 <button type="button" id="fileSelect"class="btn btn-info"><span class="glyphicon glyphicon-camera"></span></button>
@@ -34,6 +31,9 @@
 				        
 				    };
 				</script>
+			</div>
+			<div class="form-group" id="food_name_input">
+				<input type="text" class="form-control" id="input_name" name="food_name" value="<?php echo set_value('food_name'); ?>" placeholder="Input Food's name">
 			</div>
 			<div id="geoLoc-area">
 				<input type="hidden" class="geo-location" id="geo-result-input" name="geo-result" value="GEO_OK">
