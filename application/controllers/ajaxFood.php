@@ -70,7 +70,7 @@ class AjaxFood extends CI_Controller {
 				$thumb_img = '/hci-foodiary/uploads/'.$lt->file_name;
 			}
 			echo '<div class="item col-md-4">
-					<div class="thumbnail">
+					<div id="thumbnail">
 		        		<div class="btn-toolbar hidden_btn">
 						  	<div class="btn-group">
 						  		<button type="button" value="'.$lt->id.'&'.$lt->user_name.'" class="btn btn-default thumbs_btn" role="button"><i class="fa fa-thumbs-up"></i></button>
