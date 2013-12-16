@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Delelte extends CI_Controller {
+class Delete extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -28,10 +28,12 @@ class Delelte extends CI_Controller {
 	
 	public function index()
 	{
-		$user_name = $this->uri->segment(2);
-		$food_id = $this->uri->segment(3);
+		$food_id = $this->uri->segment(2);
 		$ses_user = $this->session->userdata('User');
-		if($se_user['name'] != $user_name) {
+		
+		$temp_result = $this->foodiary_m->get_food("food_records", $food_id);
+		
+		if($se_user['name'] != $temp_result->user_name) {
 			alert('You are not a onwer', '/hci-foodiary');
 		}
 		else {
