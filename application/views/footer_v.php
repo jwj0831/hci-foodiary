@@ -50,7 +50,7 @@
 					var myData = {'food_id' : valArrays[0], 'user_name': valArrays[1]};
 					var myDataString = JSON.stringify(myData);
 					var cookie = getCookie('csrf_cookie_name');
-					alert(myDataString);
+					//alert(myDataString);
 					$.ajax({
 						type: 'post',
 						url: '/hci-foodiary/ajaxFood/likeFood',
