@@ -351,6 +351,7 @@
 	
 	 
 #rating-area {
+	display: inline;
 	text-align: center;
 }
 
@@ -361,10 +362,13 @@
 #upload-btn {
 	width: 120px;
 }
-
+#rating-label {
+	font-size: 24px;
+	margin-left: 5px;
+}
 #rating-upload{
 	text-align: center;
-	font-size: 40px;
+	font-size: 24px;
 	display: inline;
 	margin-left: 10px;
 }
