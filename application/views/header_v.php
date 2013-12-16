@@ -37,6 +37,7 @@
 				<div class="container-top">
 					<div class="navbar-header">
 						<a href="/hci-foodiary/new_food" id="new_btn" class="navbar-toggle btn-default pull-left"><i class="fa fa-plus"></i></a>
+						<a href="/hci-foodiary/recommend" id="recommend_btn" class="navbar-toggle btn-default pull-left"><i class="fa fa-thumbs-o-up"></i></a>
 <?php
 	if( @$this->session->userdata('logged_in') == TRUE ) {
 		$ses_user=$this->session->userdata('User');

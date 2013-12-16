@@ -12,7 +12,7 @@
 		
 			var pathArray = window.location.pathname.split( '/' );
 			var currentPage = pathArray[2];
-			
+			alert(currentPage);
 			if(currentPage == "new_food") {
 				$("#new_menu").addClass("active");
 				$("#me_menu").removeClass("active");
