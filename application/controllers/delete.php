@@ -31,7 +31,6 @@ class Delete extends CI_Controller {
 		delete();
 	}
 	
-	
 	public function _remap($method)
 	{
 			$this->load->view('header_v');
@@ -68,6 +67,7 @@ class Delete extends CI_Controller {
 	
 	public function delete() {
 		$food_id = $this->uri->segment(2);
+		
 		$ses_user = $this->session->userdata('User');
 		
 		$data['food'] = $this->foodiary_m->get_food("food_records", $food_id);

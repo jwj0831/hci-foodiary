@@ -11,7 +11,7 @@ class Foodiary_m extends CI_Model
 	}
 	
 	function delete_food($food_id) {
-		$this->db->where('id', $id);
+		$this->db->where('id', $food_id);
 		$this->db->delete('food_records'); 
 	}
 	
