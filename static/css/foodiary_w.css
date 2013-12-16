@@ -286,9 +286,10 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 	#food_container {
-		width: 100%;
-		margin: 10% 40px;
+		width: 600px;
+		margin: auto;
 		height: 100%;
+		margin-top: 10%;
 	}
 }
 
