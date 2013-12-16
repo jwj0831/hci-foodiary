@@ -12,11 +12,15 @@
 		
 			var pathArray = window.location.pathname.split( '/' );
 			var currentPage = pathArray[2];
-			alert(currentPage);
 			if(currentPage == "new_food") {
 				$("#new_menu").addClass("active");
 				$("#me_menu").removeClass("active");
 				$("#recommend_menu").removeClass("activce");
+			}
+			else if(currentPage == "recommend") {
+				$("#new_menu").removeClass("active");
+				$("#me_menu").removeClass("active");
+				$("#recommend_menu").addClass("activce");
 			}
 			else if(currentPage == "foods") {
 				$("#new_menu").removeClass("active");
