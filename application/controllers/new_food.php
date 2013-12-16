@@ -54,7 +54,7 @@ class New_food extends CI_Controller {
 		$this->load->library('form_validation');
 		
 		$this->form_validation->set_rules('food_name', 'Food Name', 'required|max_length[12]');
-		$this->form_validation->set_rules('comments', 'Comments', 'required');
+		//$this->form_validation->set_rules('comments', 'Comments', 'required');
 		//$this->form_validation->set_rules('food_img', 'Food Image', 'required');
 		
 		if( $this->form_validation->run() == FALSE ) {
