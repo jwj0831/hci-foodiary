@@ -124,5 +124,16 @@ class Foodiary_m extends CI_Model
 		$result = $query->num_rows();
 		return $result;
 	}
+	
+	function get_food_records_in_ratings($table, $offset, $num_of_records)
+	{
+		$limit_query = ' LIMIT '.$offset.', '.$num_of_records;
+		
+		$sql = "SELECT id, user_name, user_img, file_name, food_name, ratings, like_num FROM ".$table." ORDER BY ratings DESC ORDER BY reg_date DESC".$limit_query;
+   		$query = $this->db->query($sql);
+		$result = $query->result();
+		return $result;
+	}
+	
 }
 
