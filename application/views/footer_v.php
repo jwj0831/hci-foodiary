@@ -16,7 +16,7 @@
 				$("#new_menu").addClass("active");
 				$("#me_menu").removeClass("active");
 				$("#recommend_menu").removeClass("active");
-				$("$recommmed_btn").removeClass("active");
+				$("#recommmed_btn").removeClass("active");
 			}
 			else if(currentPage == "recommend") {
 				$("#new_menu").removeClass("active");
