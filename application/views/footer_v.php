@@ -24,14 +24,14 @@
 				$("#me_menu").removeClass("active");
 				$("#recommend_menu").addClass("active");
 				
-				$("$recommmed_btn").removeClass("active");
+				$("#recommmed_btn").removeClass("active");
 			}
 			else if(currentPage == "foods") {
 				$("#new_menu").removeClass("active");
 				$("#me_menu").addClass("active");
 				$("#recommend_menu").removeClass("active");
 				
-				$("$recommmed_btn").removeClass("active");
+				$("#recommmed_btn").removeClass("active");
 				
 				
 				var widthVal = $(".panel").width();
@@ -43,14 +43,14 @@
 				$("#me_menu").addClass("active");
 				$("#recommend_menu").removeClass("activce");
 				
-				$("$recommmed_btn").removeClass("active");
+				$("#recommmed_btn").removeClass("active");
 			}
 			else if(currentPage == "recommend") {
 				$("#new_menu").removeClass("active");
 				$("#me_menu").removeClass("active");
 				$("#recommend_menu").addClass("active");
 				
-				$("$recommmed_btn").addClass("active");
+				$("#recommmed_btn").addClass("active");
 				
 			}
 			else if(currentPage == "") {
