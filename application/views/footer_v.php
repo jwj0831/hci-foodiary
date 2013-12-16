@@ -87,15 +87,15 @@
 			$('#login_cancle').click(function(){
 				window.location.href = "http://117.16.146.70/hci-foodiary";
 			});
-			
-	    	$(document).ready(function() {
-	    		$('.thumbnail').on('mouseenter', '.touch', function() {
+
+			$(document).on('mouseenter', '.thumbnail', function() {
 				    $(this).children(".btn-toolbar").toggleClass('hidden_btn');
-				}).on('mouseleave', '.touch', function() {
+				}).on('mouseleave', '.thumbnail', function() {
 				    $(this).children(".btn-toolbar").toggleClass('hidden_btn');
 				});
-	    		
-	    		
+
+			
+	    	$(document).ready(function() {
 				// input rating value
 				$('.starrr').on('starrr:change', function(e, value){
 				  //alert('new rating is ' + value);
