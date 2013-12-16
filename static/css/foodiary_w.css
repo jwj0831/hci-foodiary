@@ -362,10 +362,16 @@
 #upload-btn {
 	width: 120px;
 }
+#rating-form {
+	margin-top: 5px;	
+}
+
 #rating-label {
 	font-size: 24px;
-	margin-left: 5px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
+
 #rating-upload{
 	text-align: center;
 	font-size: 24px;
@@ -373,7 +379,9 @@
 	margin-left: 10px;
 }
 
-
+#submit-form {
+	margin-top: 5px;
+}
 
 /*
  * me

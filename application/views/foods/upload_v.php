@@ -40,7 +40,7 @@
 				<input type="hidden" class="geo-location" id="geo-lat-input" name="geo_lat" value="0.0">
 				<input type="hidden" class="geo-location" id="geo-long-input" name="geo_long" value="0.0">
 			</div>
-			<div class="form-group">
+			<div class="form-group" id="rating-form">
 				<label id="rating-label" for="rating-area">Rating: </label>
 				<div id="rating-area">
 					<div id="rating-upload" class="starrr "></div>
@@ -55,7 +55,7 @@
 					</div>
 				</div>
 			</dvi>
-			<div id="btn-area" class="form-group">
+			<div id="btn-area" class="form-group" id="submit-form">
 				<button type="button" class="btn btn-primary" id="upload-btn">Send</button>
 			</div>
 			<div class="error">
