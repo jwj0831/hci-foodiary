@@ -28,6 +28,10 @@
 		width: 40px;
 	}
 	
+	#recommend_btn.active {
+		background-color: #428bca;
+	}
+	
 	#me_btn {
 		border: 0px;
 		margin-top: 4px;
