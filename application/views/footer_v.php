@@ -84,7 +84,6 @@
 	    	$(document).ready(function() {
 	    		
 	    		$(".thumbnail").hover( function(e){
-	    			e.preventDefault();
 					$(this).children(".btn-toolbar").toggleClass('hidden_btn');
 				});
 	    		
