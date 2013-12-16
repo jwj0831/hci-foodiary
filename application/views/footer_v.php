@@ -88,6 +88,16 @@
 				window.location.href = "http://117.16.146.70/hci-foodiary";
 			});
 
+			$("#upload-btn").click(function(){
+				if($("#input_name").val() == ""){
+					alert('Please Input Food name');
+					return false;
+				}
+				else{
+					$("#upload_action").submit();
+				}
+			});
+
 			$(document).on('mouseenter', '.thumbnail', function() {
 				    $(this).children(".btn-toolbar").toggleClass('hidden_btn');
 				}).on('mouseleave', '.thumbnail', function() {
@@ -102,15 +112,7 @@
 				  $('#rating-val').val( value );
 				});
 				
-				$("#upload-btn").click(function(){
-					if($("#input_name").val() == ""){
-						alert('Please Input Food name');
-						return false;
-					}
-					else{
-						$("#upload_action").submit();
-					}
-				});
+				
 				
 				var offset = 9; //total loaded record group(s)
 				var loading  = false; //to prevents multipal ajax loads
