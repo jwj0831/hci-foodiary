@@ -345,13 +345,37 @@
 	#upload_container {
 		margin: 20% 5px;
 	}
-
+	#rating-label {
+	font-size: 24px;
+	margin-left: 20px;
+	margin-right: 20px;
+	}
+	
+	#rating-upload{
+		text-align: center;
+		font-size: 24px;
+		display: inline;
+		margin-left: 10px;
+	}
 }
 
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 	#upload_container {
 		margin: 20% 15%;
+	}
+	
+	#rating-label {
+	font-size: 40px;
+	margin-left: 20px;
+	margin-right: 20px;
+	}
+	
+	#rating-upload{
+		text-align: center;
+		font-size: 40px;
+		display: inline;
+		margin-left: 10px;
 	}
 }
 
