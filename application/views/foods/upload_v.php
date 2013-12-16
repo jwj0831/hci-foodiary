@@ -43,7 +43,7 @@
 			<div class="form-group">
 				<label for="rating-area">Rating: </label>
 				<div id="rating-area">
-					<div class="starrr upload"></div>
+					<div id="rating-upload" class="starrr "></div>
 					<input type="hidden" class="rating-location" id="rating-val" name="ratings" value="0">
 				</div>
 			</div>
