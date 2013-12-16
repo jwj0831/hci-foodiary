@@ -351,7 +351,7 @@
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
 	#upload_container {
-		margin: 20% 5px;
+		margin: 20% 15%;
 	}
 }
 
