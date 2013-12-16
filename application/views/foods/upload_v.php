@@ -55,7 +55,7 @@
 					</div>
 				</div>
 			</dvi>
-			<div id="btn-area" class="form-group" id="submit-form">
+			<div class="form-group" id="submit-form">
 				<button type="button" class="btn btn-primary" id="upload-btn">Send</button>
 			</div>
 			<div class="error">
