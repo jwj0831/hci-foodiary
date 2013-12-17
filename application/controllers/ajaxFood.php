@@ -51,11 +51,20 @@ class AjaxFood extends CI_Controller {
 	
 	function getMoreFoods()
 	{
+		$currentPage = $this->uri->segment(3);
 		$data = $this->input->post('data', true);
 		$data = json_decode($data);
 		$offset = $data->offset;
 		$num_of_records = 9;
-		$data = $this->foodiary_m->get_food_records('food_records', $offset, $num_of_records);
+		
+		$this->load->view('foods/recommend_v', $data);
+		
+		if($currentPage == "recommend"){
+			$data = $this->foodiary_m->get_food_records_in_ratings('food_records', $offset, $num_of_records);
+		}
+		else {
+			$data = $this->foodiary_m->get_food_records('food_records', $offset, $num_of_records);
+		}
 		
 		$i=1;
 		foreach ($data as $lt)

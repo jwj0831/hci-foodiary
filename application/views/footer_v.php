@@ -12,6 +12,7 @@
 		
 			var pathArray = window.location.pathname.split( '/' );
 			var currentPage = pathArray[2];
+			
 			if(currentPage == "new_food") {
 				$("#new_menu").addClass("active");
 				$("#me_menu").removeClass("active");
@@ -130,9 +131,11 @@
 							//load data from the server using a HTTP POST request
 							var myData = {'offset' : offset};
 							var myDataString = JSON.stringify(myData);
+							var ajaxbaseURL = '/hci-foodiary/ajaxFood/getMoreFoods'
+							var ajaxTotalURL = ajaxBaseURL.concat(currentPage);
 							$.ajax({
 								type: 'post',
-								url: '/hci-foodiary/ajaxFood/getMoreFoods',
+								url: ajaxTotalURL,
 								data: {'data': myDataString, 'csrf_test_name':cookie},
 								ContentType: "application/json",
 								error:function(xhr, ajaxOptions, thrownError) {//any errors?
@@ -146,11 +149,6 @@
 									loading = false;
 									offset = offset + 9;
 									
-									/*
-									$(".thumbnail").hover( function(e){
-										$(this).children(".btn-toolbar").toggleClass('hidden_btn');
-									});
-									*/
 								}
 							});
 						}
