@@ -57,8 +57,6 @@ class AjaxFood extends CI_Controller {
 		$offset = $data->offset;
 		$num_of_records = 9;
 		
-		$this->load->view('foods/recommend_v', $data);
-		
 		if($currentPage == "recommend"){
 			$data = $this->foodiary_m->get_food_records_in_ratings('food_records', $offset, $num_of_records);
 		}
