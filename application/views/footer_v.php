@@ -132,7 +132,7 @@
 							var myData = {'offset' : offset};
 							var myDataString = JSON.stringify(myData);
 							var ajaxbaseURL = '/hci-foodiary/ajaxFood/getMoreFoods'
-							var ajaxTotalURL = ajaxbaseURL.concat.('/').concat(currentPage);
+							var ajaxTotalURL = ajaxbaseURL.concat('/').concat(currentPage);
 							$.ajax({
 								type: 'post',
 								url: ajaxTotalURL,
